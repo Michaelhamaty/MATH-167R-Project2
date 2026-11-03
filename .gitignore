@@ -1,0 +1,7 @@
+# raw Yelp files are huge, don't commit them
+data/raw/
+data/dl.log
+
+.DS_Store
+.Rhistory
+.Rproj.user/

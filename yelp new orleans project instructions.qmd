@@ -1,0 +1,677 @@
+---
+title: "Yelp New Orleans Restaurant Analysis"
+subtitle: "A portfolio project in data cleaning, joins, spatial analysis, and reviewer-adjusted ratings"
+date: last-modified
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-tools: true
+    theme: cosmo
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Project overview
+
+In this project, you will use the Yelp Open Dataset to investigate restaurants in the New Orleans area. You will work with several large JSON databases rather than a single, already-cleaned table. Your analysis should demonstrate that you can import, clean, connect, summarize, visualize, and explain real-world data.
+
+The final product should be an employer-facing data product in a GitHub repository. The main report may be written directly in `README.md`, or it may be a rendered HTML report linked from the README. In either case, a potential employer should be able to understand your question, view your tables, graphs, and maps, follow your data workflow, and inspect the source code.
+
+You should not expect me to run the Quarto file to see your results. You are responsible for producing a viewable final product before submitting the repository.
+
+### Acceptable ways to present the final product
+
+#### Option 1: README as the main report
+
+This is acceptable and may be the simplest approach. Your `README.md` should contain:
+
+- the one-sentence research question;
+- a short executive summary;
+- the data sources and cleaning decisions;
+- the selected restaurant categories and geographic system;
+- important tables;
+- static graphs and maps saved as `.png`, `.jpg`, or `.svg` files and embedded with Markdown;
+- the main conclusions and limitations; and
+- links to the code in the repository.
+
+Example Markdown for a figure:
+
+```markdown
+## Restaurant ratings by geographic area
+
+![Average restaurant ratings by area](figures/ratings_by_area.png)
+```
+
+The README is easy to view directly on GitHub and can serve as the complete report. The source code should still be visible in the `.qmd` file or in the `R/` folder.
+
+#### Option 2: README plus a rendered HTML report
+
+This is the recommended portfolio format. The README acts as the landing page and links to a fully rendered report:
+
+```markdown
+## View the complete report
+
+[Open the rendered HTML report](docs/yelp_new_orleans_project.html)
+```
+
+The student renders the Quarto file once, saves the resulting HTML and figures in `docs/` or a GitHub Pages site, and submits the repository. You only need to click the link to view the finished report.
+
+For example, from the project folder the student could run:
+
+```bash
+quarto render yelp_new_orleans_project.qmd --output-dir docs
+```
+
+The student then commits the resulting `docs/` files to GitHub. You do not need to run this command yourself.
+
+#### Option 3: GitHub Pages
+
+Students can publish the rendered HTML report as a GitHub Pages website. A simple workflow is:
+
+```text
+1. Render the QMD file to HTML.
+2. Save the HTML output and figures in a docs/ folder.
+3. Push the repository to GitHub.
+4. Set GitHub Pages to publish from the docs/ folder.
+5. Put the published URL near the top of README.md.
+```
+
+GitHub Pages can also be configured with GitHub Actions to render and publish automatically. However, an automatic workflow can only render successfully if the data needed by the report is available to the workflow. Because the raw Yelp files should not be uploaded to GitHub, students may need to render locally and commit the finished HTML, tables, and figures instead.
+
+Example README landing page:
+
+```markdown
+# Where to Find the Best Seafood in New Orleans
+
+## Executive summary
+
+This project compares seafood restaurants across several geographic systems...
+
+**[View the complete rendered report](https://yourusername.github.io/repository-name/)**
+
+## Main findings
+
+1. ...
+2. ...
+
+![Map of restaurant ratings](figures/seafood_ratings_map.png)
+
+## Source code
+
+- [Data import code](R/import.R)
+- [Cleaning code](R/clean.R)
+- [Analysis code](R/analysis.R)
+- [Quarto source](yelp_new_orleans_project.qmd)
+```
+
+The required final submission is therefore the viewable README and/or rendered report, together with the code that produced it. I should not have to execute the analysis to see the final tables, graphs, or maps.
+
+Your project will combine:
+
+- large-file JSON import;
+- data cleaning and missing-value handling;
+- relational joins using `business_id`;
+- geographic point and polygon data;
+- a spatial join using `sf`;
+- summaries and visualizations with `dplyr` and `ggplot2`;
+- reviewer-level analysis and normalized review scores; and
+- clear communication of limitations.
+
+## Research question
+
+Your project should answer **one main question**:
+
+> Where can someone find the best restaurants in a selected category in New Orleans, and which geographic area is best for finding them?
+
+Define “best” using evidence such as ratings, review volume, reviewer-adjusted scores, and the reliability of the comparison. Your final question should name your selected restaurant category or theme.
+
+### Questions to help motivate your analysis
+
+Here are several questions I thought about when designing this project. Use these to motivate your analysis and research.
+
+- Where should someone go for the best seafood in New Orleans?
+- Traveling with young children? Where can a family find the best fast food or quick-service restaurants?
+- Where can a visitor find the best breakfast and coffee in New Orleans?
+- Which geographic area is best for finding highly rated dessert restaurants?
+- Where can someone find the best combination of high ratings and a reasonable number of reviews?
+- Do the “best” areas change when ratings are adjusted for reviewer scoring habits?
+
+Your report should combine these ideas into one focused question rather than treating them as separate projects.
+
+## The data
+
+Download the Yelp Open Dataset from the official Yelp Open Dataset page. The files used in this project are JSON databases stored as one JSON record per line:
+
+- `yelp_academic_dataset_business.json` — business name, address, city, state, latitude, longitude, stars, review count, categories, attributes, and hours;
+- `yelp_academic_dataset_review.json` — review text, stars, date, useful/funny/cool votes, reviewer ID, and business ID; and
+- optionally, `yelp_academic_dataset_user.json` — additional reviewer information that may help you decide which reviewers to include. You may be able to summarize reviewer activity using only the review database, so you may not need this file.
+
+The business and review tables are connected by the common key `business_id`. One business can have many reviews, so this is a one-to-many relationship.
+
+Do **not** upload the giant raw JSON files to GitHub. Store them locally in `data/raw/`, add that folder to `.gitignore`, and include download instructions in your README. You may include a small sample only for testing or demonstrating code; clearly label it and do not use it as a substitute for the complete final dataset.
+
+Once the project is over, you can delete these files off your hard drive. You can probably delete these files once you have loaded and saved the smaller/filtered files.
+
+Example project structure:
+
+```text
+yelp-new-orleans-project/
+├── README.md
+├── yelp_new_orleans_project.qmd
+├── data/
+│   ├── raw/                 # not committed to GitHub
+│   └── new_orleans/         # filtered and documented outputs
+├── R/
+│   ├── import.R
+│   ├── clean.R
+│   └── analysis.R
+├── figures/
+├── renv.lock
+└── .gitignore
+```
+
+## Packages and setup
+
+Install the packages once. You may use additional packages, but document them in your report and in `renv.lock`.
+
+```{r}
+#| eval: false
+
+install.packages(c(
+  "tidyverse", "jsonlite", "lubridate", "sf", "tigris",
+  "scales", "viridis"
+))
+```
+
+```{r}
+library(tidyverse)
+library(jsonlite)
+library(lubridate)
+library(sf)
+library(tigris)
+library(scales)
+library(viridis)
+
+options(tigris_use_cache = TRUE)
+```
+
+## Step 1: Import the large JSON files
+
+The Yelp files are much larger than the small CSV files used in ordinary examples. `jsonlite::stream_in()` is useful because it reads a JSON stream rather than requiring you to write a complicated parser by hand.
+
+Place the downloaded files in `data/raw/`. The following code imports the business table and keeps the columns needed for this project.
+
+```{r}
+#| eval: false
+
+business_file <- "data/raw/yelp_academic_dataset_business.json"
+review_file <- "data/raw/yelp_academic_dataset_review.json"
+
+business_raw <- jsonlite::stream_in(
+  file(business_file),
+  verbose = FALSE
+)
+
+business <- business_raw |>
+  select(
+    business_id, name, address, city, state, postal_code,
+    latitude, longitude, stars, review_count, categories
+  )
+
+review_raw <- jsonlite::stream_in(
+  file(review_file),
+  verbose = FALSE
+)
+
+reviews <- review_raw |>
+  select(business_id, user_id, stars, date, text, useful, funny, cool)
+```
+
+### Important import notes
+
+- Use `file()` when passing a large file to `stream_in()`.
+- Do not print the entire object. Use `glimpse()`, `names()`, `dim()`, and a few rows.
+- Keep only columns that you need. This reduces memory use and makes your analysis easier to understand.
+**Large-data management requirement:** The raw Yelp files are huge and may be difficult to download, extract, store, and import into R. Add a section to your report explaining how you handled the large dataset. Describe problems you encountered, such as low memory, limited disk space, a slow computer, a failed download, or a long import time, and explain how you overcame them. You should research solutions appropriate for your computer, such as using a documented sample during development, processing the review file in chunks, keeping only necessary columns, saving filtered data as compressed `.rds` files, and deleting or managing temporary files. A sample is acceptable for testing code, but it is not acceptable as the final result unless I have approved that choice. Your final results must use the complete set of New Orleans restaurant businesses and all available Yelp reviews for those businesses.
+
+```{r}
+#| eval: false
+
+dim(business)
+dim(reviews)
+glimpse(business)
+glimpse(reviews)
+head(business, 3)
+```
+
+## Step 2: Clean and filter to New Orleans restaurants
+
+The business file contains many types of businesses and many cities. You must show how you identify restaurants in the New Orleans area. Do not assume that every business in the file is a restaurant.
+
+Begin by examining the relevant fields:
+
+```{r}
+#| eval: false
+business |>
+  filter(state == "LA", city == "New Orleans") |>
+  select(categories) |>
+  head(10)
+```
+
+Create a restaurant subset. Yelp's `categories` field contains comma-separated category labels, so use a text pattern rather than exact equality.
+
+```{r}
+#| eval: false
+
+new_orleans_restaurants <- business |>
+  filter(
+    state == "LA",
+    city == "New Orleans",
+    !is.na(categories),
+    str_detect(categories, regex("Restaurants", ignore_case = TRUE))
+  ) |>
+  mutate(
+    postal_code = na_if(postal_code, ""),
+    categories = str_squish(categories),
+    business_name = str_squish(name)
+  ) |>
+  distinct(business_id, .keep_all = TRUE)
+
+new_orleans_restaurants |>
+  summarise(
+    number_of_restaurants = n(),
+    missing_latitude = sum(is.na(latitude)),
+    missing_longitude = sum(is.na(longitude)),
+    missing_categories = sum(is.na(categories))
+  )
+```
+
+In your report, explain your definition of “New Orleans restaurant.” For example, you might use the Yelp `city` and `state` fields first, then compare that result with an official geographic boundary in the spatial-join step.
+
+Because the raw files are large, save the filtered objects as compressed RDS files. The raw JSON files should remain on each student's computer and should not be committed to GitHub. Here is the code Claude gave me to create and it worked for me! Test the code to make sure it works for you.
+
+```{r}
+#| eval: false
+
+dir.create("data/new_orleans", recursive = TRUE, showWarnings = FALSE)
+
+saveRDS(
+  new_orleans_restaurants,
+  "data/new_orleans/business_new_orleans.rds",
+  compress = "xz"
+)
+
+# read it back in later
+new_orleans_restaurants_loaded <- readRDS("data/new_orleans/business_new_orleans.rds")
+```
+
+## Step 3: Select and analyze related restaurant categories
+
+The `categories` field contains several comma-separated labels for each business. You must choose at least **three related restaurant categories** for a focused analysis. Your categories should fit together conceptually and should support a compelling question.
+
+For example, you might choose `Fast Food`, `Delis`, and `Donuts` and describe the project as:
+
+> **Best areas and places to get a quick bite to eat in New Orleans**
+
+You may choose a different theme, such as seafood, desserts, nightlife, coffee, breakfast, or international cuisine. Do not simply choose the three most common categories. Choose categories that are related to one another and explain why they belong in the same analysis.
+
+### Extract and inspect individual categories
+
+First, separate the comma-separated category field into one row per business-category combination. Clean capitalization and whitespace before counting categories.
+
+### Find categories that appear together
+
+A business can belong to several categories.
+
+Use the category counts and pair counts to select your categories. Your chosen set must ultimately contain at least **10 restaurants located in at least 7 different geographic areas** under the geographic system you choose later. If your first set is too small, choose a broader but still meaningful set of related categories.
+
+Create an explicit inclusion rule. For example, you might include a restaurant if it belongs to **at least one** of your three selected categories:
+
+```{r}
+#| eval: false
+
+selected_categories <- c("fast food", "delis", "donuts")
+
+selected_category_businesses <- restaurant_categories |>
+  filter(category %in% selected_categories) |>
+  distinct(business_id)
+
+```
+
+You may instead require a business to match two or all three categories, but then you must explain that choice and verify that enough restaurants remain. Your report must include:
+
+- the three or more categories you selected;
+- the conceptual reason they belong together;
+- the category counts and co-occurrence evidence you used;
+- the inclusion rule you applied;
+- the number of qualifying restaurants; and
+- evidence that the restaurants occur in at least seven geographic areas.
+
+Your category analysis should make an argument, not just list category counts. For example, compare the selected restaurants across geographic areas using restaurant counts, average business ratings, review volume, and the reviewer-adjusted scores developed later.
+
+## Step 4: Join businesses to reviews
+
+Filter the reviews before the join so that you do not carry reviews for thousands of unrelated businesses through the rest of the analysis.
+
+## Step 5: Add an official geographic boundary with a spatial join
+
+A latitude and longitude pair is a point. A city boundary is a polygon. A spatial join connects a point to the polygon that contains it.
+
+Here, you will download Louisiana place boundaries from the U.S. Census TIGER/Line data using `tigris`. The Yelp `city` field is a text label; the spatial join gives you a second, independently constructed geographic label.
+
+```{r}
+#| eval: false
+
+louisiana_places <- tigris::places(
+  state = "LA",
+  cb = TRUE,
+  year = 2024,
+  class = "sf"
+)
+
+restaurant_points <- new_orleans_restaurants |>
+  filter(!is.na(longitude), !is.na(latitude)) |>
+  st_as_sf(
+    coords = c("longitude", "latitude"),
+    crs = 4326,
+    remove = FALSE
+  )
+
+restaurants_with_place <- restaurant_points |>
+  st_join(
+    louisiana_places |>
+      select(GEOID, place_name = NAME),
+    join = st_within,
+    left = TRUE
+  )
+
+restaurants_with_place |>
+  st_drop_geometry() |>
+  count(city, place_name, sort = TRUE)
+```
+
+Compare `city` with `place_name`. Investigate mismatches rather than automatically deleting them. Possible explanations include geocoding differences, businesses near a boundary, postal-city labels, or coordinates that need checking.
+
+You may use the official polygon for a map or for a stricter geographic filter:
+
+```{r}
+#| eval: false
+
+new_orleans_boundary <- louisiana_places |>
+  filter(place_name == "New Orleans")
+
+new_orleans_map_data <- restaurants_with_place |>
+  filter(place_name == "New Orleans")
+
+ggplot() +
+  geom_sf(data = new_orleans_boundary, fill = "grey95", color = "grey35") +
+  geom_sf(
+    data = new_orleans_map_data,
+    aes(color = stars),
+    alpha = 0.65,
+    size = 1.5
+  ) +
+  scale_color_viridis_c(option = "C", limits = c(1, 5)) +
+  labs(
+    title = "Yelp Restaurants Located Within New Orleans",
+    color = "Business\nstars"
+  ) +
+  theme_minimal()
+```
+
+## Step 6: Choose and defend a geographic area
+
+Do not assume that one geographic system is automatically the best way to divide New Orleans. Different boundaries answer different questions. Your job is to investigate several possibilities, perform preliminary analyses, and then defend the geographic area that best fits your research question.
+
+You must compare at least **two** of the following geographic systems. You may compare more than two if your computer and research question make that practical:
+
+- **ZIP Code Tabulation Areas (ZCTAs):** Census approximations of ZIP-code areas. These are useful for postal and business-location questions, but they should not automatically be described as neighborhoods.
+- **Census tracts:** Statistical areas designed for population and demographic analysis.
+- **Census block groups:** Smaller statistical areas within census tracts. They provide more detail, but they may contain too few restaurants for stable comparisons.
+- **Neighborhood Statistical Areas:** New Orleans-specific local boundaries created for planning and community analysis.
+- **Wards:** Historical or administrative divisions of New Orleans that may be useful for civic or historical questions.
+
+You should obtain boundary data from an appropriate source. Census geographies can be obtained through `tigris`; New Orleans-specific layers such as Neighborhood Statistical Areas and wards can be obtained from the City of New Orleans or Data.NOLA.gov. 
+
+### Geographic comparison requirements
+
+For each geographic system you test:
+
+1. Convert the Yelp latitude and longitude values into an `sf` point object.
+2. Use a spatial join to assign each restaurant to an area.
+3. Count the number of restaurants in each area.
+4. Calculate the average business rating and, if possible, the reviewer-adjusted rating.
+5. Check how many restaurants are unmatched or assigned to `NA`.
+6. Identify areas with very few restaurants and explain how that affects your conclusions.
+7. Create at least one map or comparison plot.
+
+Create a comparison table such as this one:
+
+| Geographic system | Number of areas | Restaurants assigned | Unmatched restaurants | Smallest area count | Largest area count |
+|---|---:|---:|---:|---:|---:|
+| ZIP/ZCTA |  |  |  |  |  |
+| Census tract |  |  |  |  |  |
+| Neighborhood Statistical Area |  |  |  |  |  |
+| Ward |  |  |  |  |  |
+
+Your final report must explain which geographic system you selected for the main analysis and why. Your decision should consider:
+
+- whether the boundaries match the question you are asking;
+- whether the areas are understandable to a general audience;
+- whether the areas contain enough restaurants for meaningful comparisons;
+- whether the areas are too large or too small;
+- whether the boundaries create many unmatched points;
+- whether the geography supports useful maps and visualizations; and
+- whether the area names and definitions are documented clearly.
+
+There is no single required “correct” choice. A strong project can select any of these systems if the choice is supported by evidence. Do not choose a geography only because it produces the highest or most interesting rating.
+
+### Example analysis pattern
+
+The following pattern can be adapted for each boundary dataset:
+
+```{r}
+#| eval: false
+
+restaurants_by_area <- restaurant_points |>
+  st_join(area_boundaries, join = st_within, left = TRUE) |>
+  st_drop_geometry() |>
+  group_by(area_name) |>
+  summarise(
+    number_of_restaurants = n(),
+    average_business_stars = mean(stars, na.rm = TRUE),
+    median_business_stars = median(stars, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(desc(number_of_restaurants))
+```
+
+Replace `area_boundaries` and `area_name` with the appropriate object and column names for the geography you are testing. Keep a record of the changes you make because the names and identifiers differ among ZIP/ZCTA, tract, block-group, neighborhood, and ward data.
+
+### Suggested final geographic question
+
+One possible research question is:
+
+> Which geographic definition provides the most useful explanation of how restaurant locations and Yelp ratings vary across New Orleans?
+
+This question requires you to compare geographic systems rather than simply produce one map. In your conclusion, explain what your chosen boundaries reveal and what they hide.
+
+## Step 7: Analyze ratings with all reviewers and selected reviewers
+
+Your analysis must include reviews from **all reviewers** and a second analysis using only a defined group of reviewers. This lets you compare ordinary Yelp averages with ratings from reviewers who have enough activity to make a reviewer-level adjustment meaningful.
+
+For this section, focus on the restaurants in your selected category group:
+
+```{r}
+#| eval: false
+
+category_reviews <- new_orleans_reviews |>
+  semi_join(selected_restaurants, by = "business_id") |>
+  mutate(
+    review_date = ymd(date),
+    review_year = year(review_date)
+  )
+
+all_reviewer_summary <- category_reviews |>
+  group_by(business_id) |>
+  summarise(
+    number_of_reviews_all_reviewers = n(),
+    average_stars_all_reviewers = mean(stars, na.rm = TRUE),
+    median_stars_all_reviewers = median(stars, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+all_reviewer_summary |>
+  arrange(desc(average_stars_all_reviewers)) |>
+  slice_head(n = 10)
+```
+
+### Select reviewers with enough activity
+
+Reviewers with only one review cannot provide much evidence about their usual scoring behavior. Count reviews within your selected category group and define a minimum activity threshold. Five reviews is a reasonable starting point, but you may choose a different threshold if you justify it.
+
+```{r}
+#| eval: false
+
+reviewer_activity <- category_reviews |>
+  count(user_id, name = "reviews_in_selected_categories") |>
+  arrange(desc(reviews_in_selected_categories))
+
+eligible_reviewers <- reviewer_activity |>
+  filter(reviews_in_selected_categories >= 5)
+
+selected_reviewer_reviews <- category_reviews |>
+  semi_join(eligible_reviewers, by = "user_id")
+```
+
+Report how many reviewers were retained and what percentage of category reviews they represent. Explain how changing the threshold changes the results.
+
+### Normalize each reviewer's scores
+
+Some reviewers may give almost every restaurant five stars, while others may rarely give five stars. Create a reviewer baseline using the reviewer's mean and median score within the selected category group. Then subtract the baseline from each reviewer's individual rating.
+
+For example, if a reviewer has an average score of 5 and gives a restaurant 5 stars, the normalized score is `5 - 5 = 0`. If that reviewer gives a restaurant 4 stars, the normalized score is `-1`. A reviewer whose usual average is 3 and who gives a restaurant 4 stars has a normalized score of `+1`.
+
+```{r}
+#| eval: false
+
+reviewer_baselines <- category_reviews |>
+  group_by(user_id) |>
+  summarise(
+    reviewer_mean = mean(stars, na.rm = TRUE),
+    reviewer_median = median(stars, na.rm = TRUE),
+    reviewer_review_count = n(),
+    .groups = "drop"
+  )
+
+category_reviews_adjusted <- category_reviews |>
+  left_join(reviewer_baselines, by = "user_id") |>
+  mutate(
+    normalized_mean_score = stars - reviewer_mean,
+    normalized_median_score = stars - reviewer_median
+  )
+
+eligible_adjusted_reviews <- category_reviews_adjusted |>
+  semi_join(eligible_reviewers, by = "user_id")
+```
+
+Use the mean- or median-based score as your primary normalized score and explain your choice. Do not describe the normalized score as a new Yelp rating. It measures whether a reviewer's rating was higher or lower than that reviewer's usual rating behavior.
+
+### Compare raw and reviewer-adjusted results
+
+Create a restaurant-level table containing both the ordinary result using all reviewers and the reviewer-adjusted result using eligible reviewers.
+
+```{r}
+#| eval: false
+
+restaurant_summary <- selected_restaurants |>
+  select(business_id, business_name) |>
+  left_join(all_reviewer_summary, by = "business_id") |>
+  left_join(
+    eligible_adjusted_reviews |>
+      group_by(business_id) |>
+      summarise(
+        number_of_reviews_eligible_reviewers = n(),
+        average_stars_eligible_reviewers = mean(stars, na.rm = TRUE),
+        average_normalized_score = mean(
+          normalized_mean_score,
+          na.rm = TRUE
+        ),
+        median_normalized_score = median(
+          normalized_mean_score,
+          na.rm = TRUE
+        ),
+        .groups = "drop"
+      ),
+    by = "business_id"
+  ) |>
+  arrange(desc(average_normalized_score))
+
+restaurant_summary |>
+  filter(number_of_reviews_eligible_reviewers >= 5) |>
+  slice_head(n = 10)
+```
+
+Your report should compare the conclusions from the two approaches. Identify restaurants or geographic areas whose rankings change substantially after reviewer normalization. Discuss whether the change appears to reflect reviewer behavior, small sample sizes, or another feature of the data.
+
+```{r}
+#| eval: false
+
+ggplot(
+  restaurant_summary,
+  aes(
+    x = average_stars_all_reviewers,
+    y = average_normalized_score
+  )
+) +
+  geom_hline(yintercept = 0, color = "grey70") +
+  geom_point(
+    aes(size = number_of_reviews_all_reviewers),
+    alpha = 0.60
+  ) +
+  labs(
+    title = "Raw Restaurant Ratings Compared with Reviewer-Adjusted Scores",
+    x = "Average stars from all reviewers",
+    y = "Average normalized score",
+    size = "Reviews"
+  ) +
+  theme_minimal()
+```
+
+## Required deliverables
+
+Your GitHub repository and viewable README and/or rendered report must include:
+
+1. one clearly stated research question with your answer of top 10 restaurants and a final map with boundaries showing where the top 10 restaurants are located.
+2. code showing how the large JSON files were imported;
+3. a large-data management section explaining downloading, extraction, storage, import problems, memory or disk limitations, and the solutions used;
+4. at least three related restaurant categories, category counts, category co-occurrence analysis, and a clear argument for the selected category group;
+5. evidence that the selected category group contains at least 10 restaurants in different geographic areas;
+6. a comparison of at least two geographic systems and a justification for the final geographic choice;
+7. a normalized reviewer score using a mean or median reviewer baseline or reason why you ignored
+8. at least three informative visualizations, including one map;
+9. a viewable final product so the tables, graphs, and maps can be seen without running the analysis.
+10. AI Prompts that you used and i'm more interested in specific examples and how you reprompted
+
+## Portfolio-quality README checklist
+
+Your README should help another person reproduce the project. Include:
+
+- the research question and a two- or three-sentence executive summary;
+- a description of the files and folders;
+- instructions for downloading the Yelp data;
+- a note explaining why the raw JSON files are not committed to GitHub;
+- a link to the rendered HTML report or a complete report written directly in `README.md`;
+- viewable tables, graphs, and maps embedded in the README or linked from it;
+- instructions for viewing the GitHub Pages report, if you use GitHub Pages;
+- two or three findings that a nontechnical reader can understand.
+
+## Sources
+
+- Yelp Open Dataset: <https://business.yelp.com/data/resources/open-dataset/>
+- U.S. Census TIGER/Line files: <https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html>
+- `tigris` package documentation: <https://walker-data.com/tigris/>
+- Quarto GitHub Pages documentation: <https://quarto.org/docs/publishing/github-pages.html>
