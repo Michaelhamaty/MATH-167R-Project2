@@ -20,7 +20,7 @@ A business counts if `state == "LA"`, `city == "New Orleans"`, and its `categori
 - `data/new_orleans/business_new_orleans.rds` - filtered businesses
 - `data/new_orleans/reviews_new_orleans.rds` - reviews for those businesses
 
-Read them back with:
+The reviews file is about 74 MB, so it is stored with Git LFS (run `git lfs install` before cloning, or download it from the GitHub page). Read them back with:
 
 ```r
 business <- readRDS("data/new_orleans/business_new_orleans.rds")
