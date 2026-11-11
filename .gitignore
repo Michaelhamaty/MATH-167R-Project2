@@ -5,3 +5,6 @@ data/dl.log
 .DS_Store
 .Rhistory
 .Rproj.user/
+
+/.quarto/
+**/*.quarto_ipynb

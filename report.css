@@ -1,0 +1,85 @@
+/* Reading width, title ink, captions, and space around figures. */
+
+main.content p,
+main.content li {
+  max-width: 42rem;
+  line-height: 1.65;
+}
+
+#title-block-header .title,
+.quarto-title-block .quarto-title h1.title,
+main.content h1,
+main.content h2,
+main.content h3 {
+  color: #2F3B4A;
+}
+
+.quarto-title .subtitle,
+p.subtitle {
+  color: #5B6675;
+}
+
+figcaption,
+.figure-caption,
+.quarto-float-caption,
+caption {
+  color: #5B6675;
+}
+
+.quarto-figure,
+figure.quarto-float {
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Graph or table first. The code stays folded under it. */
+div.cell {
+  display: flex;
+  flex-direction: column;
+}
+
+div.cell > .cell-output,
+div.cell > .cell-output-display {
+  order: 1;
+}
+
+div.cell > details.code-fold {
+  order: 2;
+  margin-top: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Plain rules, in the booktabs spirit. Quarto adds a stripe class to tables that come from code. */
+table {
+  border-collapse: collapse;
+  margin: 1.15rem 0 1.4rem 0;
+  width: auto;
+  font-size: 0.95rem;
+}
+
+table thead th,
+table.table > thead > tr > th {
+  border-top: 2px solid #2F3B4A;
+  border-bottom: 1px solid #2F3B4A;
+  padding: 0.45rem 1.1rem 0.45rem 0;
+  font-weight: 600;
+  color: #2F3B4A;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+table tbody td,
+table.table > tbody > tr > td,
+table.table.table-striped > tbody > tr:nth-of-type(odd) > td {
+  border-bottom: 1px solid #D5DBE1;
+  padding: 0.45rem 1.1rem 0.45rem 0;
+  vertical-align: top;
+  background-color: transparent;
+  box-shadow: none;
+  --bs-table-bg-type: transparent;
+  --bs-table-accent-bg: transparent;
+}
+
+table tbody tr:last-child td {
+  border-bottom: 2px solid #2F3B4A;
+}
