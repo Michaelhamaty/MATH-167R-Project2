@@ -1,0 +1,11 @@
+"business_id","business_name","stars","latitude","longitude","n_reviews","area_name","mean_stars_all","eligible_reviews","adjusted_score","median_gap","score_at_10","eligible_at_10","rank"
+"yf8a1DOlqoqlKHuLSKEfxg","Dante's Kitchen",4.5,29.9458219,-90.1349687,656,"Leonidas",4.30335365853659,54,0.240740740740741,0,0.285714285714286,14,1
+"ww3YJXu5c18aGZXWmm00qg","Café Amelie",4.5,29.9598673,-90.0629027,2790,"French Quarter",4.24659498207885,51,-0.107843137254902,0,-0.133333333333333,15,2
+"wtwDcp79klLOLaIjCFHQCA","Saffron nola",4.5,29.9208222,-90.0987917,305,"East Riverside",4.28196721311475,50,0.21,0,0.461538461538462,13,3
+"gjbmwlYUImb2lQBp5LV3KA","Maypop Restaurant",4.5,29.948960746,-90.0748741999,609,"Central Business District",4.38752052545156,41,-0.0853658536585366,0,-0.1,10,4
+"q4aAaxdN4wmUZoC6sKEwsw","Carrollton Market",4.5,29.944307,-90.1343254,199,"Leonidas",4.55778894472362,31,0.193548387096774,0,0.25,10,5
+"jKTWcdyXPw_cGUp9fKqapQ","Sneaky Pickle",4.5,29.9648999,-90.0429541,356,"Bywater",4.5252808988764,27,-0.407407407407407,0,-0.944444444444444,9,6
+"rvF-BwyaCHeb30u3Xf7FbQ","The Elysian Bar",4.5,29.9668829,-90.0549542,143,"Marigny",4.38461538461539,25,0.14,0,-0.214285714285714,7,7
+"DqQx0ROrpoNbvg9dmeq6Cg","Treo",4.5,29.9677173334,-90.1032279742,90,"Mid-City",4.32222222222222,25,0.04,0,-0.1,10,8
+"SeLObMnlgTwz8PoT_gSZ0Q","The Bower Bar",4.5,29.9377653,-90.0712579,55,"Lower Garden District",4.54545454545455,23,0.0652173913043478,0,0.05,10,9
+"Q1hBOIqr_p6MRnMLawz6cA","True Food Kitchen",4.5,29.945841,-90.071842,175,"Central Business District",4.38857142857143,23,-0.130434782608696,0,0,7,10
