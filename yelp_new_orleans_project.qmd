@@ -66,7 +66,24 @@ data.frame(
 
 That filter leaves 2,259 restaurants and 476,421 reviews. Every review belongs to one of those restaurants.
 
-The review file is about 5 GB. My laptop has 8 GB of RAM, so `R/import.R` does not load it all at once. `jsonlite::stream_in()` reads it in pages of 100,000 reviews and keeps only the reviews for these restaurants. The raw JSON is not in the repo. The download steps are in `README.md`.
+## Large-data management
+
+The raw Yelp files are too big to load the usual way. The review file is about 5 GB. My laptop has 8 GB of RAM and about 12 GB of free disk space. Those two limits shaped every step.
+
+- **Download:** I downloaded only the business and review files, not the whole Yelp archive. `R/download.sh` pulls them from Kaggle. The files arrive as zip files, so `R/import.R` unzips them.
+- **Memory:** The business file is about 120 MB, so I read it at once. The review file would not fit. `jsonlite::stream_in()` reads it in pages of 100,000 reviews. Each page is filtered to the 2,259 restaurants before the next page loads, so only the kept reviews stay in memory.
+- **Columns:** I kept only the columns the analysis uses: the business details, and for each review the reviewer, stars, date, text, and vote counts.
+- **Storage:** The filtered tables are saved as `xz`-compressed RDS files. The reviews file is about 70 MB, and I track it with Git LFS. Every step after the import reads these files.
+- **Disk:** I deleted the raw JSON and zip files after saving the RDS files. They are not in the repo.
+- **Time:** The import takes about 7 minutes.
+
+The code is below. It is the full import script. This page does not run it, because the raw files are not in the repo. It runs only the later steps, from the saved files.
+
+```{r}
+#| label: import-code
+#| file: R/import.R
+#| eval: false
+```
 
 ## The four categories
 

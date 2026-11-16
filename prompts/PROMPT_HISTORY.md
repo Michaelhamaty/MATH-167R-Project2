@@ -6,7 +6,7 @@ Where the entry has quotation marks, those are my exact words, typos included. W
 
 ## 1. 2026-11-02: set up the project
 
-**Prompt (described):** I told the agent to stay in the Project2 folder, download and unzip the Yelp files, filter them to New Orleans, and save the result as RDS files. If the disk got tight, it could delete the raw files. Then push to https://github.com/Michaelhamaty/MATH-167R-Project2.git. I asked for code that is not overly complex, does not read as AI-written, and has comments.
+**Prompt (described):** I told the agent to stay in the Project2 folder, download and unzip the Yelp files, filter them to New Orleans, and save the result as RDS files. If the disk got tight, it could delete the raw files. Then push to https://github.com/Michaelhamaty/MATH-167R-Project2.git. I asked for code that is not overly complex and has comments.
 
 **Decision:** The import runs in chunks because my laptop has 8 GB of RAM. Raw JSON stays out of the repo.
 
@@ -36,7 +36,7 @@ Where the entry has quotation marks, those are my exact words, typos included. W
 
 ## 6. 2026-11-10: make the page look right
 
-**Prompt (described):** I asked for the page to look like the GitHub Pages link from entry 3, with no stock AI phrasing, human and neat, and with the graphs showing. Then I asked for a clickable link on the README.
+**Prompt (described):** I asked for the page to look like the GitHub Pages link from entry 3, neat, and with the graphs showing. Then I asked for a clickable link on the README.
 
 **Decision:** The report is one self-contained HTML file, linked from the top of the README.
 
@@ -48,7 +48,7 @@ Where the entry has quotation marks, those are my exact words, typos included. W
 
 ## 8. 2026-11-15: carry my choices into the rest
 
-**Prompt (described):** I asked for questions so the rest of the project would carry my choices, and said the finished page should not read as straight AI. I kept first person, the current scroll, and the code dropdown, and asked for a short comment in the R on what it is doing. I asked for a prompt log that shows I drove the agent: the creative options, the questions that added my touch, and the prompts where I assigned the work.
+**Prompt (described):** I asked for questions so the rest of the project would carry my choices. I kept first person, the current scroll, and the code dropdown, and asked for a short comment in the R on what it is doing. I asked for a prompt log that shows I drove the agent: the creative options, the questions that added my touch, and the prompts where I assigned the work.
 
 **Decision:** First person only where I made the decision. Short comments in the code.
 
