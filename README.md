@@ -6,7 +6,7 @@ Michael Hamaty
 
 The page has the maps, the charts, the tables, and the R code. Click "View R code" under a chart to see the code.
 
-Leonidas comes out first: 7 places, average 4.43 stars. The French Quarter has 37 places and a lower average, 3.97.
+Leonidas comes out first on Yelp stars: 7 places, average 4.43. The French Quarter has 37 places and a lower average, 3.97. On the adjusted score the French Quarter is first, at -0.14 over 23 places.
 
 ## The foodie set
 
@@ -18,9 +18,10 @@ A restaurant stays in the set when three things are true. It has at least one of
 - [R/categories.R](R/categories.R) builds the 108 and joins their reviews
 - [R/places.R](R/places.R) checks the points against the Census city boundary
 - [R/areas.R](R/areas.R) compares neighborhoods with census tracts
+- [R/reviewers.R](R/reviewers.R) adjusts each review for the reviewer's usual score, then builds the top 10 lists, the scatter, and the top 10 map
 - [yelp_new_orleans_project.qmd](yelp_new_orleans_project.qmd) is the page source
 
-Reviewer-adjusted scores are not in this report.
+The prompts I gave the agent, with what I decided after each, are in [prompts/PROMPT_HISTORY.md](prompts/PROMPT_HISTORY.md).
 
 ## How I defined a "New Orleans restaurant"
 
@@ -51,6 +52,7 @@ Rscript R/import.R
 Rscript R/categories.R
 Rscript R/places.R        # downloads a Census place file the first time
 Rscript R/areas.R         # downloads census tracts the first time
+Rscript R/reviewers.R     # adjusted scores, top 10 lists, scatter, and map
 ```
 
 The Yelp Open Dataset is also available from https://www.yelp.com/dataset. Put the unzipped files in `data/raw/`.
