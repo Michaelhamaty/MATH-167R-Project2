@@ -2337,6 +2337,7 @@ border-bottom: 2px solid #2F3B4A;
 
 
 <p>Where can a foodie find local, creative places to stay for a meal, a drink, or seafood in New Orleans, which ten places rank first, and which neighborhood is best when an area needs at least five of those places?</p>
+<p>I am someone who has a great appreciation for businesses who have clearly put intentional thought and creativity into their work. This project does just that, while also offering the spotlight to small developing businesses.</p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>I wanted a meal, a drink, or seafood in a place that still felt local, so those four labels are the start of the set.</p>
@@ -4213,480 +4214,482 @@ Figure 8: The adjusted top 10 inside the neighborhood boundaries. The four Fren
 <span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>Where can a foodie find local, creative places to stay for a meal, a drink, or seafood in New Orleans, which ten places rank first, and which neighborhood is best when an area needs at least five of those places?</span>
 <span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>I am someone who has a great appreciation for businesses who have clearly put intentional thought and creativity into their work. This project does just that, while also offering the spotlight to small developing businesses.</span>
 <span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>I wanted a meal, a drink, or seafood in a place that still felt local, so those four labels are the start of the set.</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
 <span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a>I kept a restaurant only when three things were true. It had to have at least one of four Yelp categories: American (new), cocktail bars, cafes, or seafood. Its name could appear at most twice among the 2,259 New Orleans restaurants. And at least 5% of its reviews had to use one of these words: fusion, handmade, courtyard, mural, seasonal, inventive, or omakase. That leaves 108 places.</span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a>I wanted a meal, a drink, or seafood in a place that still felt local, so those four labels are the start of the set.</span>
 <span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a>Neighborhood Statistical Areas are the map. Census tracts are the comparison. An area is ranked only when it has at least five of these places. The highest average business stars wins. The number of places is the tie-breaker. Leonidas is first, with 7 places and an average of 4.43 stars. The French Quarter has more places, 37, and a lower average, 3.97.</span>
+<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a>I kept a restaurant only when three things were true. It had to have at least one of four Yelp categories: American (new), cocktail bars, cafes, or seafood. Its name could appear at most twice among the 2,259 New Orleans restaurants. And at least 5% of its reviews had to use one of these words: fusion, handmade, courtyard, mural, seasonal, inventive, or omakase. That leaves 108 places.</span>
 <span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a>The adjusted top 10 starts with Roux Carre. Under the stars rule, Leonidas is the best neighborhood. Under the adjusted rule, which needs 5 places with an adjusted score and averages those scores, the French Quarter is first, at -0.14 over 23 places.</span>
+<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a>Neighborhood Statistical Areas are the map. Census tracts are the comparison. An area is ranked only when it has at least five of these places. The highest average business stars wins. The number of places is the tie-breaker. Leonidas is first, with 7 places and an average of 4.43 stars. The French Quarter has more places, 37, and a lower average, 3.97.</span>
 <span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
-<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-44"><a href="#cb23-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the two packages the page uses</span></span>
-<span id="cb23-45"><a href="#cb23-45" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb23-46"><a href="#cb23-46" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb23-47"><a href="#cb23-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-48"><a href="#cb23-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-49"><a href="#cb23-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## New Orleans restaurants</span></span>
+<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a>The adjusted top 10 starts with Roux Carre. Under the stars rule, Leonidas is the best neighborhood. Under the adjusted rule, which needs 5 places with an adjusted score and averages those scores, the French Quarter is first, at -0.14 over 23 places.</span>
+<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
+<span id="cb23-44"><a href="#cb23-44" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb23-45"><a href="#cb23-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-46"><a href="#cb23-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the two packages the page uses</span></span>
+<span id="cb23-47"><a href="#cb23-47" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb23-48"><a href="#cb23-48" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb23-49"><a href="#cb23-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-50"><a href="#cb23-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-51"><a href="#cb23-51" aria-hidden="true" tabindex="-1"></a>A business counts as a New Orleans restaurant when <span class="in">`state`</span> is LA, <span class="in">`city`</span> is New Orleans, and the categories text contains &quot;Restaurants&quot;. That work is in <span class="in">`R/import.R`</span>. This page reads the saved files. It does not import the raw JSON again.</span>
+<span id="cb23-51"><a href="#cb23-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## New Orleans restaurants</span></span>
 <span id="cb23-52"><a href="#cb23-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-55"><a href="#cb23-55" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-56"><a href="#cb23-56" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-counts</span></span>
-<span id="cb23-57"><a href="#cb23-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-58"><a href="#cb23-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Row counts from the saved files</span></span>
-<span id="cb23-59"><a href="#cb23-59" aria-hidden="true" tabindex="-1"></a>business <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;data/new_orleans/business_new_orleans.rds&quot;</span>)</span>
-<span id="cb23-60"><a href="#cb23-60" aria-hidden="true" tabindex="-1"></a>reviews <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;data/new_orleans/reviews_new_orleans.rds&quot;</span>)</span>
-<span id="cb23-61"><a href="#cb23-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-62"><a href="#cb23-62" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
-<span id="cb23-63"><a href="#cb23-63" aria-hidden="true" tabindex="-1"></a>  <span class="at">Restaurants =</span> <span class="fu">nrow</span>(business),</span>
-<span id="cb23-64"><a href="#cb23-64" aria-hidden="true" tabindex="-1"></a>  <span class="at">Reviews =</span> <span class="fu">nrow</span>(reviews)</span>
-<span id="cb23-65"><a href="#cb23-65" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb23-66"><a href="#cb23-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">booktabs =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb23-67"><a href="#cb23-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-68"><a href="#cb23-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-69"><a href="#cb23-69" aria-hidden="true" tabindex="-1"></a>That filter leaves 2,259 restaurants and 476,421 reviews. Every review belongs to one of those restaurants.</span>
+<span id="cb23-53"><a href="#cb23-53" aria-hidden="true" tabindex="-1"></a>A business counts as a New Orleans restaurant when <span class="in">`state`</span> is LA, <span class="in">`city`</span> is New Orleans, and the categories text contains &quot;Restaurants&quot;. That work is in <span class="in">`R/import.R`</span>. This page reads the saved files. It does not import the raw JSON again.</span>
+<span id="cb23-54"><a href="#cb23-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-57"><a href="#cb23-57" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-58"><a href="#cb23-58" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-counts</span></span>
+<span id="cb23-59"><a href="#cb23-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-60"><a href="#cb23-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Row counts from the saved files</span></span>
+<span id="cb23-61"><a href="#cb23-61" aria-hidden="true" tabindex="-1"></a>business <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;data/new_orleans/business_new_orleans.rds&quot;</span>)</span>
+<span id="cb23-62"><a href="#cb23-62" aria-hidden="true" tabindex="-1"></a>reviews <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;data/new_orleans/reviews_new_orleans.rds&quot;</span>)</span>
+<span id="cb23-63"><a href="#cb23-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-64"><a href="#cb23-64" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb23-65"><a href="#cb23-65" aria-hidden="true" tabindex="-1"></a>  <span class="at">Restaurants =</span> <span class="fu">nrow</span>(business),</span>
+<span id="cb23-66"><a href="#cb23-66" aria-hidden="true" tabindex="-1"></a>  <span class="at">Reviews =</span> <span class="fu">nrow</span>(reviews)</span>
+<span id="cb23-67"><a href="#cb23-67" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb23-68"><a href="#cb23-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">booktabs =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb23-69"><a href="#cb23-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-70"><a href="#cb23-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-71"><a href="#cb23-71" aria-hidden="true" tabindex="-1"></a>The review file is about 5 GB. My laptop has 8 GB of RAM, so <span class="in">`R/import.R`</span> does not load it all at once. <span class="in">`jsonlite::stream_in()`</span> reads it in pages of 100,000 reviews and keeps only the reviews for these restaurants. The raw JSON is not in the repo. The download steps are in <span class="in">`README.md`</span>.</span>
+<span id="cb23-71"><a href="#cb23-71" aria-hidden="true" tabindex="-1"></a>That filter leaves 2,259 restaurants and 476,421 reviews. Every review belongs to one of those restaurants.</span>
 <span id="cb23-72"><a href="#cb23-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-73"><a href="#cb23-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## The four categories</span></span>
+<span id="cb23-73"><a href="#cb23-73" aria-hidden="true" tabindex="-1"></a>The review file is about 5 GB. My laptop has 8 GB of RAM, so <span class="in">`R/import.R`</span> does not load it all at once. <span class="in">`jsonlite::stream_in()`</span> reads it in pages of 100,000 reviews and keeps only the reviews for these restaurants. The raw JSON is not in the repo. The download steps are in <span class="in">`README.md`</span>.</span>
 <span id="cb23-74"><a href="#cb23-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-75"><a href="#cb23-75" aria-hidden="true" tabindex="-1"></a>The four labels are American (new), cocktail bars, cafes, and seafood. I picked them because they are ways to stay for a meal, a drink, or seafood. A restaurant needs only one label to enter the set.</span>
+<span id="cb23-75"><a href="#cb23-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## The four categories</span></span>
 <span id="cb23-76"><a href="#cb23-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-79"><a href="#cb23-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-80"><a href="#cb23-80" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: category-counts</span></span>
-<span id="cb23-81"><a href="#cb23-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-82"><a href="#cb23-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Category counts from the saved file, with readable labels</span></span>
-<span id="cb23-83"><a href="#cb23-83" aria-hidden="true" tabindex="-1"></a>category_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb23-84"><a href="#cb23-84" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;seafood&quot;</span> <span class="ot">=</span> <span class="st">&quot;Seafood&quot;</span>,</span>
-<span id="cb23-85"><a href="#cb23-85" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;american (new)&quot;</span> <span class="ot">=</span> <span class="st">&quot;American (new)&quot;</span>,</span>
-<span id="cb23-86"><a href="#cb23-86" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;cafes&quot;</span> <span class="ot">=</span> <span class="st">&quot;Cafes&quot;</span>,</span>
-<span id="cb23-87"><a href="#cb23-87" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;cocktail bars&quot;</span> <span class="ot">=</span> <span class="st">&quot;Cocktail bars&quot;</span></span>
-<span id="cb23-88"><a href="#cb23-88" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-89"><a href="#cb23-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-90"><a href="#cb23-90" aria-hidden="true" tabindex="-1"></a>category_counts <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/category_counts.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-91"><a href="#cb23-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">category =</span> category_labels[category])</span>
-<span id="cb23-92"><a href="#cb23-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-93"><a href="#cb23-93" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-94"><a href="#cb23-94" aria-hidden="true" tabindex="-1"></a>  category_counts,</span>
-<span id="cb23-95"><a href="#cb23-95" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Category&quot;</span>, <span class="st">&quot;Restaurants&quot;</span>),</span>
-<span id="cb23-96"><a href="#cb23-96" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb23-97"><a href="#cb23-97" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-98"><a href="#cb23-98" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-99"><a href="#cb23-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-102"><a href="#cb23-102" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-103"><a href="#cb23-103" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-categories</span></span>
-<span id="cb23-104"><a href="#cb23-104" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;New Orleans restaurants in each of the four categories. A place is counted once for each label.&quot;</span></span>
-<span id="cb23-105"><a href="#cb23-105" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
-<span id="cb23-106"><a href="#cb23-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-107"><a href="#cb23-107" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/categories.R</span></span>
-<span id="cb23-108"><a href="#cb23-108" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/category_counts.png&quot;</span>)</span>
-<span id="cb23-109"><a href="#cb23-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-110"><a href="#cb23-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-111"><a href="#cb23-111" aria-hidden="true" tabindex="-1"></a>Seafood is the largest label, at 331 restaurants. American (new) has 323, cafes have 173, and cocktail bars have 160. A place is counted once for each label it carries, so one restaurant can land in more than one of those totals.</span>
+<span id="cb23-77"><a href="#cb23-77" aria-hidden="true" tabindex="-1"></a>The four labels are American (new), cocktail bars, cafes, and seafood. I picked them because they are ways to stay for a meal, a drink, or seafood. A restaurant needs only one label to enter the set.</span>
+<span id="cb23-78"><a href="#cb23-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-81"><a href="#cb23-81" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-82"><a href="#cb23-82" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: category-counts</span></span>
+<span id="cb23-83"><a href="#cb23-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-84"><a href="#cb23-84" aria-hidden="true" tabindex="-1"></a><span class="co"># Category counts from the saved file, with readable labels</span></span>
+<span id="cb23-85"><a href="#cb23-85" aria-hidden="true" tabindex="-1"></a>category_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb23-86"><a href="#cb23-86" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;seafood&quot;</span> <span class="ot">=</span> <span class="st">&quot;Seafood&quot;</span>,</span>
+<span id="cb23-87"><a href="#cb23-87" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;american (new)&quot;</span> <span class="ot">=</span> <span class="st">&quot;American (new)&quot;</span>,</span>
+<span id="cb23-88"><a href="#cb23-88" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;cafes&quot;</span> <span class="ot">=</span> <span class="st">&quot;Cafes&quot;</span>,</span>
+<span id="cb23-89"><a href="#cb23-89" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;cocktail bars&quot;</span> <span class="ot">=</span> <span class="st">&quot;Cocktail bars&quot;</span></span>
+<span id="cb23-90"><a href="#cb23-90" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-91"><a href="#cb23-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-92"><a href="#cb23-92" aria-hidden="true" tabindex="-1"></a>category_counts <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/category_counts.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-93"><a href="#cb23-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">category =</span> category_labels[category])</span>
+<span id="cb23-94"><a href="#cb23-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-95"><a href="#cb23-95" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-96"><a href="#cb23-96" aria-hidden="true" tabindex="-1"></a>  category_counts,</span>
+<span id="cb23-97"><a href="#cb23-97" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Category&quot;</span>, <span class="st">&quot;Restaurants&quot;</span>),</span>
+<span id="cb23-98"><a href="#cb23-98" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb23-99"><a href="#cb23-99" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-100"><a href="#cb23-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb23-101"><a href="#cb23-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-104"><a href="#cb23-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-105"><a href="#cb23-105" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-categories</span></span>
+<span id="cb23-106"><a href="#cb23-106" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;New Orleans restaurants in each of the four categories. A place is counted once for each label.&quot;</span></span>
+<span id="cb23-107"><a href="#cb23-107" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
+<span id="cb23-108"><a href="#cb23-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-109"><a href="#cb23-109" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/categories.R</span></span>
+<span id="cb23-110"><a href="#cb23-110" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/category_counts.png&quot;</span>)</span>
+<span id="cb23-111"><a href="#cb23-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-112"><a href="#cb23-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-113"><a href="#cb23-113" aria-hidden="true" tabindex="-1"></a>The same restaurant can carry two of the labels. A seafood place with no cocktail bar still counts, because one label is enough.</span>
+<span id="cb23-113"><a href="#cb23-113" aria-hidden="true" tabindex="-1"></a>Seafood is the largest label, at 331 restaurants. American (new) has 323, cafes have 173, and cocktail bars have 160. A place is counted once for each label it carries, so one restaurant can land in more than one of those totals.</span>
 <span id="cb23-114"><a href="#cb23-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-117"><a href="#cb23-117" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-118"><a href="#cb23-118" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: category-pairs</span></span>
-<span id="cb23-119"><a href="#cb23-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-120"><a href="#cb23-120" aria-hidden="true" tabindex="-1"></a><span class="co"># Pair counts from the saved file</span></span>
-<span id="cb23-121"><a href="#cb23-121" aria-hidden="true" tabindex="-1"></a>category_pairs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/category_pairs.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-122"><a href="#cb23-122" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb23-123"><a href="#cb23-123" aria-hidden="true" tabindex="-1"></a>    <span class="at">category_a =</span> category_labels[category_a],</span>
-<span id="cb23-124"><a href="#cb23-124" aria-hidden="true" tabindex="-1"></a>    <span class="at">category_b =</span> category_labels[category_b]</span>
-<span id="cb23-125"><a href="#cb23-125" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb23-126"><a href="#cb23-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-127"><a href="#cb23-127" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-128"><a href="#cb23-128" aria-hidden="true" tabindex="-1"></a>  category_pairs,</span>
-<span id="cb23-129"><a href="#cb23-129" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Category&quot;</span>, <span class="st">&quot;Also has&quot;</span>, <span class="st">&quot;Restaurants&quot;</span>),</span>
-<span id="cb23-130"><a href="#cb23-130" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb23-131"><a href="#cb23-131" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Restaurants that carry both labels.&quot;</span></span>
-<span id="cb23-132"><a href="#cb23-132" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-133"><a href="#cb23-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-134"><a href="#cb23-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-135"><a href="#cb23-135" aria-hidden="true" tabindex="-1"></a>American (new) and cocktail bars share 51 restaurants. American (new) and seafood share 45. Cocktail bars and seafood share 30. American (new) and cafes share 26. Cafes and cocktail bars share 13. Cafes and seafood share 5.</span>
+<span id="cb23-115"><a href="#cb23-115" aria-hidden="true" tabindex="-1"></a>The same restaurant can carry two of the labels. A seafood place with no cocktail bar still counts, because one label is enough.</span>
+<span id="cb23-116"><a href="#cb23-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-119"><a href="#cb23-119" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-120"><a href="#cb23-120" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: category-pairs</span></span>
+<span id="cb23-121"><a href="#cb23-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-122"><a href="#cb23-122" aria-hidden="true" tabindex="-1"></a><span class="co"># Pair counts from the saved file</span></span>
+<span id="cb23-123"><a href="#cb23-123" aria-hidden="true" tabindex="-1"></a>category_pairs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/category_pairs.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-124"><a href="#cb23-124" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb23-125"><a href="#cb23-125" aria-hidden="true" tabindex="-1"></a>    <span class="at">category_a =</span> category_labels[category_a],</span>
+<span id="cb23-126"><a href="#cb23-126" aria-hidden="true" tabindex="-1"></a>    <span class="at">category_b =</span> category_labels[category_b]</span>
+<span id="cb23-127"><a href="#cb23-127" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-128"><a href="#cb23-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-129"><a href="#cb23-129" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-130"><a href="#cb23-130" aria-hidden="true" tabindex="-1"></a>  category_pairs,</span>
+<span id="cb23-131"><a href="#cb23-131" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Category&quot;</span>, <span class="st">&quot;Also has&quot;</span>, <span class="st">&quot;Restaurants&quot;</span>),</span>
+<span id="cb23-132"><a href="#cb23-132" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-133"><a href="#cb23-133" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Restaurants that carry both labels.&quot;</span></span>
+<span id="cb23-134"><a href="#cb23-134" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-135"><a href="#cb23-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-136"><a href="#cb23-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-137"><a href="#cb23-137" aria-hidden="true" tabindex="-1"></a>The category rule alone leaves 834 restaurants.</span>
+<span id="cb23-137"><a href="#cb23-137" aria-hidden="true" tabindex="-1"></a>American (new) and cocktail bars share 51 restaurants. American (new) and seafood share 45. Cocktail bars and seafood share 30. American (new) and cafes share 26. Cafes and cocktail bars share 13. Cafes and seafood share 5.</span>
 <span id="cb23-138"><a href="#cb23-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-139"><a href="#cb23-139" aria-hidden="true" tabindex="-1"></a>I counted a name as a chain when it appears more than twice among all 2,259 New Orleans restaurants. The match is the exact name after lowercasing and squishing extra spaces, so &quot;Wow Cafe&quot; and &quot;WOW Cafe&quot; are one name. When a name shows up three or more times, every theme restaurant with that name comes out. Ruby Slipper Cafe and Dat Dog come out, and so does Waffle House. Raising Cane&#39;s has five shops in the city and only one of them was in the theme, so that one shop is still removed. The count is the whole city. &quot;WOW Café&quot;, with an accent, is a different string from &quot;WOW Cafe&quot;, so the accented name is not part of that chain.</span>
+<span id="cb23-139"><a href="#cb23-139" aria-hidden="true" tabindex="-1"></a>The category rule alone leaves 834 restaurants.</span>
 <span id="cb23-140"><a href="#cb23-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-143"><a href="#cb23-143" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-144"><a href="#cb23-144" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: chains</span></span>
-<span id="cb23-145"><a href="#cb23-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-146"><a href="#cb23-146" aria-hidden="true" tabindex="-1"></a><span class="co"># Names removed by the chain rule</span></span>
-<span id="cb23-147"><a href="#cb23-147" aria-hidden="true" tabindex="-1"></a>chains <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/chains_removed.csv&quot;</span>)</span>
-<span id="cb23-148"><a href="#cb23-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-149"><a href="#cb23-149" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-150"><a href="#cb23-150" aria-hidden="true" tabindex="-1"></a>  chains,</span>
-<span id="cb23-151"><a href="#cb23-151" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Name&quot;</span>, <span class="st">&quot;Locations in the city&quot;</span>, <span class="st">&quot;Removed from the theme&quot;</span>),</span>
-<span id="cb23-152"><a href="#cb23-152" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb23-153"><a href="#cb23-153" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-154"><a href="#cb23-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-155"><a href="#cb23-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-156"><a href="#cb23-156" aria-hidden="true" tabindex="-1"></a>That removes 37 restaurants and leaves 797.</span>
+<span id="cb23-141"><a href="#cb23-141" aria-hidden="true" tabindex="-1"></a>I counted a name as a chain when it appears more than twice among all 2,259 New Orleans restaurants. The match is the exact name after lowercasing and squishing extra spaces, so &quot;Wow Cafe&quot; and &quot;WOW Cafe&quot; are one name. When a name shows up three or more times, every theme restaurant with that name comes out. Ruby Slipper Cafe and Dat Dog come out, and so does Waffle House. Raising Cane&#39;s has five shops in the city and only one of them was in the theme, so that one shop is still removed. The count is the whole city. &quot;WOW Café&quot;, with an accent, is a different string from &quot;WOW Cafe&quot;, so the accented name is not part of that chain.</span>
+<span id="cb23-142"><a href="#cb23-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-145"><a href="#cb23-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-146"><a href="#cb23-146" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: chains</span></span>
+<span id="cb23-147"><a href="#cb23-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-148"><a href="#cb23-148" aria-hidden="true" tabindex="-1"></a><span class="co"># Names removed by the chain rule</span></span>
+<span id="cb23-149"><a href="#cb23-149" aria-hidden="true" tabindex="-1"></a>chains <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/chains_removed.csv&quot;</span>)</span>
+<span id="cb23-150"><a href="#cb23-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-151"><a href="#cb23-151" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-152"><a href="#cb23-152" aria-hidden="true" tabindex="-1"></a>  chains,</span>
+<span id="cb23-153"><a href="#cb23-153" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Name&quot;</span>, <span class="st">&quot;Locations in the city&quot;</span>, <span class="st">&quot;Removed from the theme&quot;</span>),</span>
+<span id="cb23-154"><a href="#cb23-154" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb23-155"><a href="#cb23-155" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-156"><a href="#cb23-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-157"><a href="#cb23-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-158"><a href="#cb23-158" aria-hidden="true" tabindex="-1"></a>The last rule is the review text. I tried common words and dropped them, because chef, tasting, homemade, patio, and creative show up almost everywhere. The words I kept are fusion, handmade, courtyard, mural, seasonal, inventive, and omakase. A restaurant stays when at least 5% of its reviews use one of them. Any of the seven words can clear that line.</span>
+<span id="cb23-158"><a href="#cb23-158" aria-hidden="true" tabindex="-1"></a>That removes 37 restaurants and leaves 797.</span>
 <span id="cb23-159"><a href="#cb23-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-162"><a href="#cb23-162" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-163"><a href="#cb23-163" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: filter-counts</span></span>
-<span id="cb23-164"><a href="#cb23-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-165"><a href="#cb23-165" aria-hidden="true" tabindex="-1"></a><span class="co"># Restaurants left after each rule</span></span>
-<span id="cb23-166"><a href="#cb23-166" aria-hidden="true" tabindex="-1"></a>filter_counts <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/filter_counts.csv&quot;</span>)</span>
-<span id="cb23-167"><a href="#cb23-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-168"><a href="#cb23-168" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-169"><a href="#cb23-169" aria-hidden="true" tabindex="-1"></a>  filter_counts,</span>
-<span id="cb23-170"><a href="#cb23-170" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Step&quot;</span>, <span class="st">&quot;Restaurants left&quot;</span>),</span>
-<span id="cb23-171"><a href="#cb23-171" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb23-172"><a href="#cb23-172" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-173"><a href="#cb23-173" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-174"><a href="#cb23-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-175"><a href="#cb23-175" aria-hidden="true" tabindex="-1"></a>The category rule leaves 834. The chain rule leaves 797. The word rule leaves 108.</span>
+<span id="cb23-160"><a href="#cb23-160" aria-hidden="true" tabindex="-1"></a>The last rule is the review text. I tried common words and dropped them, because chef, tasting, homemade, patio, and creative show up almost everywhere. The words I kept are fusion, handmade, courtyard, mural, seasonal, inventive, and omakase. A restaurant stays when at least 5% of its reviews use one of them. Any of the seven words can clear that line.</span>
+<span id="cb23-161"><a href="#cb23-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-164"><a href="#cb23-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-165"><a href="#cb23-165" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: filter-counts</span></span>
+<span id="cb23-166"><a href="#cb23-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-167"><a href="#cb23-167" aria-hidden="true" tabindex="-1"></a><span class="co"># Restaurants left after each rule</span></span>
+<span id="cb23-168"><a href="#cb23-168" aria-hidden="true" tabindex="-1"></a>filter_counts <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/filter_counts.csv&quot;</span>)</span>
+<span id="cb23-169"><a href="#cb23-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-170"><a href="#cb23-170" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-171"><a href="#cb23-171" aria-hidden="true" tabindex="-1"></a>  filter_counts,</span>
+<span id="cb23-172"><a href="#cb23-172" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Step&quot;</span>, <span class="st">&quot;Restaurants left&quot;</span>),</span>
+<span id="cb23-173"><a href="#cb23-173" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb23-174"><a href="#cb23-174" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-175"><a href="#cb23-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-176"><a href="#cb23-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-177"><a href="#cb23-177" aria-hidden="true" tabindex="-1"></a>The 108 places sit in 13 postal codes.</span>
+<span id="cb23-177"><a href="#cb23-177" aria-hidden="true" tabindex="-1"></a>The category rule leaves 834. The chain rule leaves 797. The word rule leaves 108.</span>
 <span id="cb23-178"><a href="#cb23-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-181"><a href="#cb23-181" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-182"><a href="#cb23-182" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-stars</span></span>
-<span id="cb23-183"><a href="#cb23-183" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Business stars for the 108 places. Most sit at 4 or 4.5.&quot;</span></span>
-<span id="cb23-184"><a href="#cb23-184" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
-<span id="cb23-185"><a href="#cb23-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-186"><a href="#cb23-186" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/categories.R</span></span>
-<span id="cb23-187"><a href="#cb23-187" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/stars_distribution.png&quot;</span>)</span>
-<span id="cb23-188"><a href="#cb23-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-189"><a href="#cb23-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-190"><a href="#cb23-190" aria-hidden="true" tabindex="-1"></a>72 of the 108 sit at 4 or 4.5. Five places have a perfect 5, and 11 sit at 3 or below.</span>
+<span id="cb23-179"><a href="#cb23-179" aria-hidden="true" tabindex="-1"></a>The 108 places sit in 13 postal codes.</span>
+<span id="cb23-180"><a href="#cb23-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-183"><a href="#cb23-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-184"><a href="#cb23-184" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-stars</span></span>
+<span id="cb23-185"><a href="#cb23-185" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Business stars for the 108 places. Most sit at 4 or 4.5.&quot;</span></span>
+<span id="cb23-186"><a href="#cb23-186" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
+<span id="cb23-187"><a href="#cb23-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-188"><a href="#cb23-188" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/categories.R</span></span>
+<span id="cb23-189"><a href="#cb23-189" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/stars_distribution.png&quot;</span>)</span>
+<span id="cb23-190"><a href="#cb23-190" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-191"><a href="#cb23-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-192"><a href="#cb23-192" aria-hidden="true" tabindex="-1"></a><span class="fu">## Joining the reviews</span></span>
+<span id="cb23-192"><a href="#cb23-192" aria-hidden="true" tabindex="-1"></a>72 of the 108 sit at 4 or 4.5. Five places have a perfect 5, and 11 sit at 3 or below.</span>
 <span id="cb23-193"><a href="#cb23-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-194"><a href="#cb23-194" aria-hidden="true" tabindex="-1"></a>The review file is filtered to these 108 <span class="in">`business_id`</span>s. Each restaurant gets a review count, the mean of the review stars, and the median of the review stars. Those columns are saved in <span class="in">`data/new_orleans/selected_with_reviews.rds`</span>. The table is the first eight names, in alphabetical order.</span>
+<span id="cb23-194"><a href="#cb23-194" aria-hidden="true" tabindex="-1"></a><span class="fu">## Joining the reviews</span></span>
 <span id="cb23-195"><a href="#cb23-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-198"><a href="#cb23-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-199"><a href="#cb23-199" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: review-head</span></span>
-<span id="cb23-200"><a href="#cb23-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-201"><a href="#cb23-201" aria-hidden="true" tabindex="-1"></a><span class="co"># First eight of the 108, with their review columns</span></span>
-<span id="cb23-202"><a href="#cb23-202" aria-hidden="true" tabindex="-1"></a>review_head <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;data/new_orleans/selected_with_reviews.rds&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-203"><a href="#cb23-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb23-204"><a href="#cb23-204" aria-hidden="true" tabindex="-1"></a>    <span class="at">Restaurant =</span> business_name,</span>
-<span id="cb23-205"><a href="#cb23-205" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Business stars</span><span class="st">`</span> <span class="ot">=</span> stars,</span>
-<span id="cb23-206"><a href="#cb23-206" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Review rows</span><span class="st">`</span> <span class="ot">=</span> n_reviews,</span>
-<span id="cb23-207"><a href="#cb23-207" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Mean of review stars</span><span class="st">`</span> <span class="ot">=</span> mean_review_stars,</span>
-<span id="cb23-208"><a href="#cb23-208" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Median of review stars</span><span class="st">`</span> <span class="ot">=</span> median_review_stars</span>
-<span id="cb23-209"><a href="#cb23-209" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb23-210"><a href="#cb23-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Restaurant) <span class="sc">|&gt;</span></span>
-<span id="cb23-211"><a href="#cb23-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">8</span>)</span>
-<span id="cb23-212"><a href="#cb23-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-213"><a href="#cb23-213" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(review_head, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">booktabs =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb23-214"><a href="#cb23-214" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-215"><a href="#cb23-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-216"><a href="#cb23-216" aria-hidden="true" tabindex="-1"></a>Business stars and the mean of the review stars differ for 100 of the 108 places. The typical gap is about 0.12 stars.</span>
+<span id="cb23-196"><a href="#cb23-196" aria-hidden="true" tabindex="-1"></a>The review file is filtered to these 108 <span class="in">`business_id`</span>s. Each restaurant gets a review count, the mean of the review stars, and the median of the review stars. Those columns are saved in <span class="in">`data/new_orleans/selected_with_reviews.rds`</span>. The table is the first eight names, in alphabetical order.</span>
+<span id="cb23-197"><a href="#cb23-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-200"><a href="#cb23-200" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-201"><a href="#cb23-201" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: review-head</span></span>
+<span id="cb23-202"><a href="#cb23-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-203"><a href="#cb23-203" aria-hidden="true" tabindex="-1"></a><span class="co"># First eight of the 108, with their review columns</span></span>
+<span id="cb23-204"><a href="#cb23-204" aria-hidden="true" tabindex="-1"></a>review_head <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;data/new_orleans/selected_with_reviews.rds&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-205"><a href="#cb23-205" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb23-206"><a href="#cb23-206" aria-hidden="true" tabindex="-1"></a>    <span class="at">Restaurant =</span> business_name,</span>
+<span id="cb23-207"><a href="#cb23-207" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Business stars</span><span class="st">`</span> <span class="ot">=</span> stars,</span>
+<span id="cb23-208"><a href="#cb23-208" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Review rows</span><span class="st">`</span> <span class="ot">=</span> n_reviews,</span>
+<span id="cb23-209"><a href="#cb23-209" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Mean of review stars</span><span class="st">`</span> <span class="ot">=</span> mean_review_stars,</span>
+<span id="cb23-210"><a href="#cb23-210" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Median of review stars</span><span class="st">`</span> <span class="ot">=</span> median_review_stars</span>
+<span id="cb23-211"><a href="#cb23-211" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb23-212"><a href="#cb23-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Restaurant) <span class="sc">|&gt;</span></span>
+<span id="cb23-213"><a href="#cb23-213" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">8</span>)</span>
+<span id="cb23-214"><a href="#cb23-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-215"><a href="#cb23-215" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(review_head, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">booktabs =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb23-216"><a href="#cb23-216" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-217"><a href="#cb23-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-218"><a href="#cb23-218" aria-hidden="true" tabindex="-1"></a><span class="fu">## The city polygon</span></span>
+<span id="cb23-218"><a href="#cb23-218" aria-hidden="true" tabindex="-1"></a>Business stars and the mean of the review stars differ for 100 of the 108 places. The typical gap is about 0.12 stars.</span>
 <span id="cb23-219"><a href="#cb23-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-220"><a href="#cb23-220" aria-hidden="true" tabindex="-1"></a>Yelp&#39;s <span class="in">`city`</span> field is a text label. The Census place polygon is a separate boundary. <span class="in">`R/places.R`</span> turns the 2,259 restaurants into points and joins them to 2023 Census places with <span class="in">`st_within`</span>. Every restaurant had coordinates. I kept every mismatch in the data.</span>
+<span id="cb23-220"><a href="#cb23-220" aria-hidden="true" tabindex="-1"></a><span class="fu">## The city polygon</span></span>
 <span id="cb23-221"><a href="#cb23-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-224"><a href="#cb23-224" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-225"><a href="#cb23-225" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: city-vs-place</span></span>
-<span id="cb23-226"><a href="#cb23-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-227"><a href="#cb23-227" aria-hidden="true" tabindex="-1"></a><span class="co"># Yelp city against the Census place, from R/places.R</span></span>
-<span id="cb23-228"><a href="#cb23-228" aria-hidden="true" tabindex="-1"></a>city_vs_place <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/city_vs_place.csv&quot;</span>)</span>
-<span id="cb23-229"><a href="#cb23-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-230"><a href="#cb23-230" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-231"><a href="#cb23-231" aria-hidden="true" tabindex="-1"></a>  city_vs_place,</span>
-<span id="cb23-232"><a href="#cb23-232" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Yelp city&quot;</span>, <span class="st">&quot;Census place&quot;</span>, <span class="st">&quot;Restaurants&quot;</span>),</span>
-<span id="cb23-233"><a href="#cb23-233" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb23-234"><a href="#cb23-234" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-235"><a href="#cb23-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-236"><a href="#cb23-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-237"><a href="#cb23-237" aria-hidden="true" tabindex="-1"></a>2,202 of the 2,259 Yelp &quot;New Orleans&quot; points are inside the city polygon. The other 57 are in Elmwood, Jefferson, Harahan, Terrytown, Metairie, River Ridge, Arabi, Harvey, Gretna, or Kenner. Yelp still calls every one of them New Orleans.</span>
+<span id="cb23-222"><a href="#cb23-222" aria-hidden="true" tabindex="-1"></a>Yelp&#39;s <span class="in">`city`</span> field is a text label. The Census place polygon is a separate boundary. <span class="in">`R/places.R`</span> turns the 2,259 restaurants into points and joins them to 2023 Census places with <span class="in">`st_within`</span>. Every restaurant had coordinates. I kept every mismatch in the data.</span>
+<span id="cb23-223"><a href="#cb23-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-226"><a href="#cb23-226" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-227"><a href="#cb23-227" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: city-vs-place</span></span>
+<span id="cb23-228"><a href="#cb23-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-229"><a href="#cb23-229" aria-hidden="true" tabindex="-1"></a><span class="co"># Yelp city against the Census place, from R/places.R</span></span>
+<span id="cb23-230"><a href="#cb23-230" aria-hidden="true" tabindex="-1"></a>city_vs_place <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/city_vs_place.csv&quot;</span>)</span>
+<span id="cb23-231"><a href="#cb23-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-232"><a href="#cb23-232" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-233"><a href="#cb23-233" aria-hidden="true" tabindex="-1"></a>  city_vs_place,</span>
+<span id="cb23-234"><a href="#cb23-234" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Yelp city&quot;</span>, <span class="st">&quot;Census place&quot;</span>, <span class="st">&quot;Restaurants&quot;</span>),</span>
+<span id="cb23-235"><a href="#cb23-235" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb23-236"><a href="#cb23-236" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-237"><a href="#cb23-237" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-238"><a href="#cb23-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-241"><a href="#cb23-241" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-242"><a href="#cb23-242" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: mismatch-examples</span></span>
-<span id="cb23-243"><a href="#cb23-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-244"><a href="#cb23-244" aria-hidden="true" tabindex="-1"></a><span class="co"># One example restaurant per Census place that is not New Orleans</span></span>
-<span id="cb23-245"><a href="#cb23-245" aria-hidden="true" tabindex="-1"></a>examples <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/place_mismatch_examples.csv&quot;</span>)</span>
-<span id="cb23-246"><a href="#cb23-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-247"><a href="#cb23-247" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-248"><a href="#cb23-248" aria-hidden="true" tabindex="-1"></a>  examples,</span>
-<span id="cb23-249"><a href="#cb23-249" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Restaurant&quot;</span>, <span class="st">&quot;Address&quot;</span>, <span class="st">&quot;Postal code&quot;</span>, <span class="st">&quot;Census place&quot;</span>),</span>
-<span id="cb23-250"><a href="#cb23-250" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb23-251"><a href="#cb23-251" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;One example from each Census place that is not New Orleans.&quot;</span></span>
-<span id="cb23-252"><a href="#cb23-252" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-253"><a href="#cb23-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-254"><a href="#cb23-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-255"><a href="#cb23-255" aria-hidden="true" tabindex="-1"></a>Le Petit Bistro has 1.5 stars, postal code 70115, a blank address, and coordinates in Kenner. That is a bad geocode. Bobby&#39;s Seafood has 4.0 stars, the address 9013 Jefferson Hwy, and postal code 70123. That address is in River Ridge, and Yelp still filed it under New Orleans.</span>
+<span id="cb23-239"><a href="#cb23-239" aria-hidden="true" tabindex="-1"></a>2,202 of the 2,259 Yelp &quot;New Orleans&quot; points are inside the city polygon. The other 57 are in Elmwood, Jefferson, Harahan, Terrytown, Metairie, River Ridge, Arabi, Harvey, Gretna, or Kenner. Yelp still calls every one of them New Orleans.</span>
+<span id="cb23-240"><a href="#cb23-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-243"><a href="#cb23-243" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-244"><a href="#cb23-244" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: mismatch-examples</span></span>
+<span id="cb23-245"><a href="#cb23-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-246"><a href="#cb23-246" aria-hidden="true" tabindex="-1"></a><span class="co"># One example restaurant per Census place that is not New Orleans</span></span>
+<span id="cb23-247"><a href="#cb23-247" aria-hidden="true" tabindex="-1"></a>examples <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/place_mismatch_examples.csv&quot;</span>)</span>
+<span id="cb23-248"><a href="#cb23-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-249"><a href="#cb23-249" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-250"><a href="#cb23-250" aria-hidden="true" tabindex="-1"></a>  examples,</span>
+<span id="cb23-251"><a href="#cb23-251" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Restaurant&quot;</span>, <span class="st">&quot;Address&quot;</span>, <span class="st">&quot;Postal code&quot;</span>, <span class="st">&quot;Census place&quot;</span>),</span>
+<span id="cb23-252"><a href="#cb23-252" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-253"><a href="#cb23-253" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;One example from each Census place that is not New Orleans.&quot;</span></span>
+<span id="cb23-254"><a href="#cb23-254" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-255"><a href="#cb23-255" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-256"><a href="#cb23-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-257"><a href="#cb23-257" aria-hidden="true" tabindex="-1"></a>Of the 108 places, 106 are inside the city. Those two are the ones outside it.</span>
+<span id="cb23-257"><a href="#cb23-257" aria-hidden="true" tabindex="-1"></a>Le Petit Bistro has 1.5 stars, postal code 70115, a blank address, and coordinates in Kenner. That is a bad geocode. Bobby&#39;s Seafood has 4.0 stars, the address 9013 Jefferson Hwy, and postal code 70123. That address is in River Ridge, and Yelp still filed it under New Orleans.</span>
 <span id="cb23-258"><a href="#cb23-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-261"><a href="#cb23-261" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-262"><a href="#cb23-262" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-city</span></span>
-<span id="cb23-263"><a href="#cb23-263" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;The 108 places against the official New Orleans boundary. Labeled points fall outside the city.&quot;</span></span>
-<span id="cb23-264"><a href="#cb23-264" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
-<span id="cb23-265"><a href="#cb23-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-266"><a href="#cb23-266" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/places.R</span></span>
-<span id="cb23-267"><a href="#cb23-267" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/city_boundary.png&quot;</span>)</span>
-<span id="cb23-268"><a href="#cb23-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-269"><a href="#cb23-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-270"><a href="#cb23-270" aria-hidden="true" tabindex="-1"></a>Grey is the Census city. Copper is the restaurant&#39;s own Yelp stars. The labeled points are Le Petit Bistro and Bobby&#39;s Seafood.</span>
+<span id="cb23-259"><a href="#cb23-259" aria-hidden="true" tabindex="-1"></a>Of the 108 places, 106 are inside the city. Those two are the ones outside it.</span>
+<span id="cb23-260"><a href="#cb23-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-263"><a href="#cb23-263" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-264"><a href="#cb23-264" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-city</span></span>
+<span id="cb23-265"><a href="#cb23-265" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;The 108 places against the official New Orleans boundary. Labeled points fall outside the city.&quot;</span></span>
+<span id="cb23-266"><a href="#cb23-266" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
+<span id="cb23-267"><a href="#cb23-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-268"><a href="#cb23-268" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/places.R</span></span>
+<span id="cb23-269"><a href="#cb23-269" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/city_boundary.png&quot;</span>)</span>
+<span id="cb23-270"><a href="#cb23-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-271"><a href="#cb23-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-272"><a href="#cb23-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## Neighborhoods and tracts</span></span>
+<span id="cb23-272"><a href="#cb23-272" aria-hidden="true" tabindex="-1"></a>Grey is the Census city. Copper is the restaurant&#39;s own Yelp stars. The labeled points are Le Petit Bistro and Bobby&#39;s Seafood.</span>
 <span id="cb23-273"><a href="#cb23-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-274"><a href="#cb23-274" aria-hidden="true" tabindex="-1"></a>Neighborhoods are the geography for the question. Census tracts are the comparison. Both layers are joined with <span class="in">`st_within`</span>. The neighborhood names come from <span class="in">`gnocdc_lab`</span>, put into title case. An area is ranked only with at least five places. The highest average business stars wins, and the count of places is the tie-breaker. Areas with fewer than five are drawn in gray and left out of the ranking.</span>
+<span id="cb23-274"><a href="#cb23-274" aria-hidden="true" tabindex="-1"></a><span class="fu">## Neighborhoods and tracts</span></span>
 <span id="cb23-275"><a href="#cb23-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-278"><a href="#cb23-278" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-279"><a href="#cb23-279" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: area-comparison</span></span>
-<span id="cb23-280"><a href="#cb23-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-281"><a href="#cb23-281" aria-hidden="true" tabindex="-1"></a><span class="co"># Neighborhoods and tracts side by side, from R/areas.R</span></span>
-<span id="cb23-282"><a href="#cb23-282" aria-hidden="true" tabindex="-1"></a>comparison <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/area_comparison.csv&quot;</span>)</span>
-<span id="cb23-283"><a href="#cb23-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-284"><a href="#cb23-284" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-285"><a href="#cb23-285" aria-hidden="true" tabindex="-1"></a>  comparison,</span>
-<span id="cb23-286"><a href="#cb23-286" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(</span>
-<span id="cb23-287"><a href="#cb23-287" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Geographic system&quot;</span>,</span>
-<span id="cb23-288"><a href="#cb23-288" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Areas in the layer&quot;</span>,</span>
-<span id="cb23-289"><a href="#cb23-289" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Areas with a place&quot;</span>,</span>
-<span id="cb23-290"><a href="#cb23-290" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Areas with at least 5&quot;</span>,</span>
-<span id="cb23-291"><a href="#cb23-291" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Restaurants assigned&quot;</span>,</span>
-<span id="cb23-292"><a href="#cb23-292" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Unmatched&quot;</span>,</span>
-<span id="cb23-293"><a href="#cb23-293" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Smallest area&quot;</span>,</span>
-<span id="cb23-294"><a href="#cb23-294" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Largest area&quot;</span></span>
-<span id="cb23-295"><a href="#cb23-295" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb23-296"><a href="#cb23-296" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb23-297"><a href="#cb23-297" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-298"><a href="#cb23-298" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-299"><a href="#cb23-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-300"><a href="#cb23-300" aria-hidden="true" tabindex="-1"></a>Neighborhoods: 72 areas, 23 with a place, 6 with at least 5, 106 assigned, 2 unmatched, counts from 1 to 37. Tracts: 184 areas, 30 with a place, 7 with at least 5, the same 106 assigned, the same 2 unmatched, counts from 1 to 23.</span>
+<span id="cb23-276"><a href="#cb23-276" aria-hidden="true" tabindex="-1"></a>Neighborhoods are the geography for the question. Census tracts are the comparison. Both layers are joined with <span class="in">`st_within`</span>. The neighborhood names come from <span class="in">`gnocdc_lab`</span>, put into title case. An area is ranked only with at least five places. The highest average business stars wins, and the count of places is the tie-breaker. Areas with fewer than five are drawn in gray and left out of the ranking.</span>
+<span id="cb23-277"><a href="#cb23-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-280"><a href="#cb23-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-281"><a href="#cb23-281" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: area-comparison</span></span>
+<span id="cb23-282"><a href="#cb23-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-283"><a href="#cb23-283" aria-hidden="true" tabindex="-1"></a><span class="co"># Neighborhoods and tracts side by side, from R/areas.R</span></span>
+<span id="cb23-284"><a href="#cb23-284" aria-hidden="true" tabindex="-1"></a>comparison <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/area_comparison.csv&quot;</span>)</span>
+<span id="cb23-285"><a href="#cb23-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-286"><a href="#cb23-286" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-287"><a href="#cb23-287" aria-hidden="true" tabindex="-1"></a>  comparison,</span>
+<span id="cb23-288"><a href="#cb23-288" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb23-289"><a href="#cb23-289" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Geographic system&quot;</span>,</span>
+<span id="cb23-290"><a href="#cb23-290" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Areas in the layer&quot;</span>,</span>
+<span id="cb23-291"><a href="#cb23-291" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Areas with a place&quot;</span>,</span>
+<span id="cb23-292"><a href="#cb23-292" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Areas with at least 5&quot;</span>,</span>
+<span id="cb23-293"><a href="#cb23-293" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Restaurants assigned&quot;</span>,</span>
+<span id="cb23-294"><a href="#cb23-294" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Unmatched&quot;</span>,</span>
+<span id="cb23-295"><a href="#cb23-295" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Smallest area&quot;</span>,</span>
+<span id="cb23-296"><a href="#cb23-296" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Largest area&quot;</span></span>
+<span id="cb23-297"><a href="#cb23-297" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb23-298"><a href="#cb23-298" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb23-299"><a href="#cb23-299" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-300"><a href="#cb23-300" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-301"><a href="#cb23-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-302"><a href="#cb23-302" aria-hidden="true" tabindex="-1"></a>The two unmatched restaurants are Le Petit Bistro and Bobby&#39;s Seafood. Their coordinates fall outside both polygon layers, which cover Orleans Parish. They stay in the set of 108. The ranking leaves them out.</span>
+<span id="cb23-302"><a href="#cb23-302" aria-hidden="true" tabindex="-1"></a>Neighborhoods: 72 areas, 23 with a place, 6 with at least 5, 106 assigned, 2 unmatched, counts from 1 to 37. Tracts: 184 areas, 30 with a place, 7 with at least 5, the same 106 assigned, the same 2 unmatched, counts from 1 to 23.</span>
 <span id="cb23-303"><a href="#cb23-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-304"><a href="#cb23-304" aria-hidden="true" tabindex="-1"></a>106 of the 108 fall in 23 neighborhoods. That meets the assignment check of at least 10 restaurants in at least 7 areas.</span>
+<span id="cb23-304"><a href="#cb23-304" aria-hidden="true" tabindex="-1"></a>The two unmatched restaurants are Le Petit Bistro and Bobby&#39;s Seafood. Their coordinates fall outside both polygon layers, which cover Orleans Parish. They stay in the set of 108. The ranking leaves them out.</span>
 <span id="cb23-305"><a href="#cb23-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-308"><a href="#cb23-308" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-309"><a href="#cb23-309" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-neighborhoods</span></span>
-<span id="cb23-310"><a href="#cb23-310" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Neighborhoods with at least five places are copper, by average stars. Gray means the area has some of these places and fewer than five. Sand means none.&quot;</span></span>
-<span id="cb23-311"><a href="#cb23-311" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
-<span id="cb23-312"><a href="#cb23-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-313"><a href="#cb23-313" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/areas.R</span></span>
-<span id="cb23-314"><a href="#cb23-314" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/neighborhoods.png&quot;</span>)</span>
-<span id="cb23-315"><a href="#cb23-315" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-316"><a href="#cb23-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-317"><a href="#cb23-317" aria-hidden="true" tabindex="-1"></a>The six copper neighborhoods are the ranking. Gray neighborhoods have at least one of these places and fewer than five, so they are left out. Read Blvd East, Pines Village, and West Lake Forest each have one place. The map is cropped to areas that contain at least one place, with extra room on the left so the Leonidas label is not cut off. Labels in the Quarter can sit on top of each other.</span>
+<span id="cb23-306"><a href="#cb23-306" aria-hidden="true" tabindex="-1"></a>106 of the 108 fall in 23 neighborhoods. That meets the assignment check of at least 10 restaurants in at least 7 areas.</span>
+<span id="cb23-307"><a href="#cb23-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-310"><a href="#cb23-310" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-311"><a href="#cb23-311" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-neighborhoods</span></span>
+<span id="cb23-312"><a href="#cb23-312" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Neighborhoods with at least five places are copper, by average stars. Gray means the area has some of these places and fewer than five. Sand means none.&quot;</span></span>
+<span id="cb23-313"><a href="#cb23-313" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
+<span id="cb23-314"><a href="#cb23-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-315"><a href="#cb23-315" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/areas.R</span></span>
+<span id="cb23-316"><a href="#cb23-316" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/neighborhoods.png&quot;</span>)</span>
+<span id="cb23-317"><a href="#cb23-317" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-318"><a href="#cb23-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-321"><a href="#cb23-321" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-322"><a href="#cb23-322" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-tracts</span></span>
-<span id="cb23-323"><a href="#cb23-323" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;The same places, divided into census tracts. Copper tracts have at least five places.&quot;</span></span>
-<span id="cb23-324"><a href="#cb23-324" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
-<span id="cb23-325"><a href="#cb23-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-326"><a href="#cb23-326" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/areas.R</span></span>
-<span id="cb23-327"><a href="#cb23-327" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/tracts.png&quot;</span>)</span>
-<span id="cb23-328"><a href="#cb23-328" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-329"><a href="#cb23-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-330"><a href="#cb23-330" aria-hidden="true" tabindex="-1"></a>Tract 129 is the Leonidas cluster, the same 7 places at 4.43. Tract 12 matches Bywater. Tract 134 matches the Central Business District, 16 places at 3.62. In the French Quarter, Tract 135.02 has 23 places at 3.91 and Tract 135.01 has 7 at 4.21. Those Quarter labels overlap on the map.</span>
+<span id="cb23-319"><a href="#cb23-319" aria-hidden="true" tabindex="-1"></a>The six copper neighborhoods are the ranking. Gray neighborhoods have at least one of these places and fewer than five, so they are left out. Read Blvd East, Pines Village, and West Lake Forest each have one place. The map is cropped to areas that contain at least one place, with extra room on the left so the Leonidas label is not cut off. Labels in the Quarter can sit on top of each other.</span>
+<span id="cb23-320"><a href="#cb23-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-323"><a href="#cb23-323" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-324"><a href="#cb23-324" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-tracts</span></span>
+<span id="cb23-325"><a href="#cb23-325" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;The same places, divided into census tracts. Copper tracts have at least five places.&quot;</span></span>
+<span id="cb23-326"><a href="#cb23-326" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
+<span id="cb23-327"><a href="#cb23-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-328"><a href="#cb23-328" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/areas.R</span></span>
+<span id="cb23-329"><a href="#cb23-329" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/tracts.png&quot;</span>)</span>
+<span id="cb23-330"><a href="#cb23-330" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-331"><a href="#cb23-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-334"><a href="#cb23-334" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-335"><a href="#cb23-335" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-ranking</span></span>
-<span id="cb23-336"><a href="#cb23-336" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Neighborhoods with at least five places. Leonidas has the highest average stars. The French Quarter has the most places. The stars axis starts at 3.5.&quot;</span></span>
-<span id="cb23-337"><a href="#cb23-337" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
-<span id="cb23-338"><a href="#cb23-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-339"><a href="#cb23-339" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/areas.R</span></span>
-<span id="cb23-340"><a href="#cb23-340" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/neighborhood_ranking.png&quot;</span>)</span>
-<span id="cb23-341"><a href="#cb23-341" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-342"><a href="#cb23-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-343"><a href="#cb23-343" aria-hidden="true" tabindex="-1"></a>Leonidas has the highest average. The French Quarter has the most places. The stars axis starts at 3.5, so 4.43 and 3.97 are easier to tell apart.</span>
+<span id="cb23-332"><a href="#cb23-332" aria-hidden="true" tabindex="-1"></a>Tract 129 is the Leonidas cluster, the same 7 places at 4.43. Tract 12 matches Bywater. Tract 134 matches the Central Business District, 16 places at 3.62. In the French Quarter, Tract 135.02 has 23 places at 3.91 and Tract 135.01 has 7 at 4.21. Those Quarter labels overlap on the map.</span>
+<span id="cb23-333"><a href="#cb23-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-336"><a href="#cb23-336" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-337"><a href="#cb23-337" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-ranking</span></span>
+<span id="cb23-338"><a href="#cb23-338" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Neighborhoods with at least five places. Leonidas has the highest average stars. The French Quarter has the most places. The stars axis starts at 3.5.&quot;</span></span>
+<span id="cb23-339"><a href="#cb23-339" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
+<span id="cb23-340"><a href="#cb23-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-341"><a href="#cb23-341" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/areas.R</span></span>
+<span id="cb23-342"><a href="#cb23-342" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/neighborhood_ranking.png&quot;</span>)</span>
+<span id="cb23-343"><a href="#cb23-343" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-344"><a href="#cb23-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-347"><a href="#cb23-347" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-348"><a href="#cb23-348" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: ranking-table</span></span>
-<span id="cb23-349"><a href="#cb23-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-350"><a href="#cb23-350" aria-hidden="true" tabindex="-1"></a><span class="co"># Neighborhood ranking under the stars rule, from R/areas.R</span></span>
-<span id="cb23-351"><a href="#cb23-351" aria-hidden="true" tabindex="-1"></a>ranking <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/neighborhood_ranking.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-352"><a href="#cb23-352" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb23-353"><a href="#cb23-353" aria-hidden="true" tabindex="-1"></a>    <span class="at">Neighborhood =</span> area_name,</span>
-<span id="cb23-354"><a href="#cb23-354" aria-hidden="true" tabindex="-1"></a>    <span class="at">Places =</span> restaurants,</span>
-<span id="cb23-355"><a href="#cb23-355" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Average stars</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.2f&quot;</span>, average_stars),</span>
-<span id="cb23-356"><a href="#cb23-356" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Median review count</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ifelse</span>(</span>
-<span id="cb23-357"><a href="#cb23-357" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abs</span>(median_review_count <span class="sc">-</span> <span class="fu">round</span>(median_review_count)) <span class="sc">&lt;</span> <span class="fl">1e-8</span>,</span>
-<span id="cb23-358"><a href="#cb23-358" aria-hidden="true" tabindex="-1"></a>      <span class="fu">sprintf</span>(<span class="st">&quot;%d&quot;</span>, <span class="fu">as.integer</span>(<span class="fu">round</span>(median_review_count))),</span>
-<span id="cb23-359"><a href="#cb23-359" aria-hidden="true" tabindex="-1"></a>      <span class="fu">sprintf</span>(<span class="st">&quot;%.1f&quot;</span>, median_review_count)</span>
-<span id="cb23-360"><a href="#cb23-360" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb23-361"><a href="#cb23-361" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb23-362"><a href="#cb23-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-363"><a href="#cb23-363" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-364"><a href="#cb23-364" aria-hidden="true" tabindex="-1"></a>  ranking,</span>
-<span id="cb23-365"><a href="#cb23-365" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb23-366"><a href="#cb23-366" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">&quot;lrrr&quot;</span>,</span>
-<span id="cb23-367"><a href="#cb23-367" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Neighborhoods with at least five places. The median is the median of the Yelp review counts.&quot;</span></span>
-<span id="cb23-368"><a href="#cb23-368" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-369"><a href="#cb23-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-370"><a href="#cb23-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-371"><a href="#cb23-371" aria-hidden="true" tabindex="-1"></a>Leonidas has 7 places, an average of 4.43, and a median of 51 reviews. Bywater also has 7 places, an average of 4.14, and a median of 160. Mid-City has 6 at 4.00, median 61. The French Quarter has 37 at 3.97, median 128. The Lower Garden District has 6 at 3.92, median 61.5. The Central Business District has 16 at 3.62, median 67.</span>
+<span id="cb23-345"><a href="#cb23-345" aria-hidden="true" tabindex="-1"></a>Leonidas has the highest average. The French Quarter has the most places. The stars axis starts at 3.5, so 4.43 and 3.97 are easier to tell apart.</span>
+<span id="cb23-346"><a href="#cb23-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-349"><a href="#cb23-349" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-350"><a href="#cb23-350" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: ranking-table</span></span>
+<span id="cb23-351"><a href="#cb23-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-352"><a href="#cb23-352" aria-hidden="true" tabindex="-1"></a><span class="co"># Neighborhood ranking under the stars rule, from R/areas.R</span></span>
+<span id="cb23-353"><a href="#cb23-353" aria-hidden="true" tabindex="-1"></a>ranking <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/neighborhood_ranking.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-354"><a href="#cb23-354" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb23-355"><a href="#cb23-355" aria-hidden="true" tabindex="-1"></a>    <span class="at">Neighborhood =</span> area_name,</span>
+<span id="cb23-356"><a href="#cb23-356" aria-hidden="true" tabindex="-1"></a>    <span class="at">Places =</span> restaurants,</span>
+<span id="cb23-357"><a href="#cb23-357" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Average stars</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.2f&quot;</span>, average_stars),</span>
+<span id="cb23-358"><a href="#cb23-358" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Median review count</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ifelse</span>(</span>
+<span id="cb23-359"><a href="#cb23-359" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abs</span>(median_review_count <span class="sc">-</span> <span class="fu">round</span>(median_review_count)) <span class="sc">&lt;</span> <span class="fl">1e-8</span>,</span>
+<span id="cb23-360"><a href="#cb23-360" aria-hidden="true" tabindex="-1"></a>      <span class="fu">sprintf</span>(<span class="st">&quot;%d&quot;</span>, <span class="fu">as.integer</span>(<span class="fu">round</span>(median_review_count))),</span>
+<span id="cb23-361"><a href="#cb23-361" aria-hidden="true" tabindex="-1"></a>      <span class="fu">sprintf</span>(<span class="st">&quot;%.1f&quot;</span>, median_review_count)</span>
+<span id="cb23-362"><a href="#cb23-362" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb23-363"><a href="#cb23-363" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-364"><a href="#cb23-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-365"><a href="#cb23-365" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-366"><a href="#cb23-366" aria-hidden="true" tabindex="-1"></a>  ranking,</span>
+<span id="cb23-367"><a href="#cb23-367" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-368"><a href="#cb23-368" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">&quot;lrrr&quot;</span>,</span>
+<span id="cb23-369"><a href="#cb23-369" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Neighborhoods with at least five places. The median is the median of the Yelp review counts.&quot;</span></span>
+<span id="cb23-370"><a href="#cb23-370" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-371"><a href="#cb23-371" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-372"><a href="#cb23-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-373"><a href="#cb23-373" aria-hidden="true" tabindex="-1"></a>I used neighborhoods because those are names a person asks for. Leonidas, Bywater, and the French Quarter are names. Tract 129 is the same Leonidas cluster, 7 places at 4.43. Tract 12 is Bywater. Tract 134 is the Central Business District, 16 places at 3.62. The tracts split the French Quarter. Tract 135.02 has 23 places at 3.91, and Tract 135.01 has 7 at 4.21. The neighborhood average rolls the Quarter into 37 places at 3.97. The rule picks Leonidas because 4.43 is higher than 3.97.</span>
+<span id="cb23-373"><a href="#cb23-373" aria-hidden="true" tabindex="-1"></a>Leonidas has 7 places, an average of 4.43, and a median of 51 reviews. Bywater also has 7 places, an average of 4.14, and a median of 160. Mid-City has 6 at 4.00, median 61. The French Quarter has 37 at 3.97, median 128. The Lower Garden District has 6 at 3.92, median 61.5. The Central Business District has 16 at 3.62, median 67.</span>
 <span id="cb23-374"><a href="#cb23-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-375"><a href="#cb23-375" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reviewers kept</span></span>
+<span id="cb23-375"><a href="#cb23-375" aria-hidden="true" tabindex="-1"></a>I used neighborhoods because those are names a person asks for. Leonidas, Bywater, and the French Quarter are names. Tract 129 is the same Leonidas cluster, 7 places at 4.43. Tract 12 is Bywater. Tract 134 is the Central Business District, 16 places at 3.62. The tracts split the French Quarter. Tract 135.02 has 23 places at 3.91, and Tract 135.01 has 7 at 4.21. The neighborhood average rolls the Quarter into 37 places at 3.97. The rule picks Leonidas because 4.43 is higher than 3.97.</span>
 <span id="cb23-376"><a href="#cb23-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-377"><a href="#cb23-377" aria-hidden="true" tabindex="-1"></a>Yelp stars are the rating on the business.</span>
+<span id="cb23-377"><a href="#cb23-377" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reviewers kept</span></span>
 <span id="cb23-378"><a href="#cb23-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-379"><a href="#cb23-379" aria-hidden="true" tabindex="-1"></a>The adjusted score uses only people who reviewed at least 5 of the 108 places. I used each person&#39;s median as their usual score, because one 1-star or one 5-star review should not reset their habit. For each review I subtracted that median from the stars they gave. The place&#39;s adjusted score is the average of those gaps. Above zero means the place beat their habit. Zero means it matched. Below zero means it fell short. This is not a new Yelp rating.</span>
+<span id="cb23-379"><a href="#cb23-379" aria-hidden="true" tabindex="-1"></a>Yelp stars are the rating on the business.</span>
 <span id="cb23-380"><a href="#cb23-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-381"><a href="#cb23-381" aria-hidden="true" tabindex="-1"></a>I counted a reviewer&#39;s activity only inside the 108. A place can appear on either top 10, and can receive an adjusted score, only when at least 5 of its reviews come from those eligible reviewers. There is no other floor on the review count. The code is in <span class="in">`R/reviewers.R`</span>. It reads the saved files and does not import the raw JSON again.</span>
+<span id="cb23-381"><a href="#cb23-381" aria-hidden="true" tabindex="-1"></a>The adjusted score uses only people who reviewed at least 5 of the 108 places. I used each person&#39;s median as their usual score, because one 1-star or one 5-star review should not reset their habit. For each review I subtracted that median from the stars they gave. The place&#39;s adjusted score is the average of those gaps. Above zero means the place beat their habit. Zero means it matched. Below zero means it fell short. This is not a new Yelp rating.</span>
 <span id="cb23-382"><a href="#cb23-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-385"><a href="#cb23-385" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-386"><a href="#cb23-386" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: reviewers-kept</span></span>
-<span id="cb23-387"><a href="#cb23-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-388"><a href="#cb23-388" aria-hidden="true" tabindex="-1"></a><span class="co"># Reviewers kept at a bar of 5 and at a bar of 10, from R/reviewers.R</span></span>
-<span id="cb23-389"><a href="#cb23-389" aria-hidden="true" tabindex="-1"></a>kept <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/reviewers_kept.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-390"><a href="#cb23-390" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb23-391"><a href="#cb23-391" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Reviewer bar</span><span class="st">`</span> <span class="ot">=</span> bar,</span>
-<span id="cb23-392"><a href="#cb23-392" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Reviewers kept</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">format</span>(reviewers_kept, <span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>),</span>
-<span id="cb23-393"><a href="#cb23-393" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Reviews they wrote</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">format</span>(reviews_by_them, <span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>),</span>
-<span id="cb23-394"><a href="#cb23-394" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share of reviews of the 108</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.1f%%&quot;</span>, <span class="dv">100</span> <span class="sc">*</span> share_of_reviews)</span>
-<span id="cb23-395"><a href="#cb23-395" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb23-396"><a href="#cb23-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-397"><a href="#cb23-397" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(kept, <span class="at">booktabs =</span> <span class="cn">TRUE</span>, <span class="at">align =</span> <span class="st">&quot;rrrr&quot;</span>)</span>
-<span id="cb23-398"><a href="#cb23-398" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-399"><a href="#cb23-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-400"><a href="#cb23-400" aria-hidden="true" tabindex="-1"></a>The bar of 5 keeps 229 of 27,559 reviewers, and they wrote 5.2% of the 33,713 reviews of the 108. At a bar of 10 the count falls to 40 reviewers and 1.8% of the reviews, and the adjusted neighborhood winner is still the French Quarter.</span>
+<span id="cb23-383"><a href="#cb23-383" aria-hidden="true" tabindex="-1"></a>I counted a reviewer&#39;s activity only inside the 108. A place can appear on either top 10, and can receive an adjusted score, only when at least 5 of its reviews come from those eligible reviewers. There is no other floor on the review count. The code is in <span class="in">`R/reviewers.R`</span>. It reads the saved files and does not import the raw JSON again.</span>
+<span id="cb23-384"><a href="#cb23-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-387"><a href="#cb23-387" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-388"><a href="#cb23-388" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: reviewers-kept</span></span>
+<span id="cb23-389"><a href="#cb23-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-390"><a href="#cb23-390" aria-hidden="true" tabindex="-1"></a><span class="co"># Reviewers kept at a bar of 5 and at a bar of 10, from R/reviewers.R</span></span>
+<span id="cb23-391"><a href="#cb23-391" aria-hidden="true" tabindex="-1"></a>kept <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/reviewers_kept.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-392"><a href="#cb23-392" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb23-393"><a href="#cb23-393" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Reviewer bar</span><span class="st">`</span> <span class="ot">=</span> bar,</span>
+<span id="cb23-394"><a href="#cb23-394" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Reviewers kept</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">format</span>(reviewers_kept, <span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>),</span>
+<span id="cb23-395"><a href="#cb23-395" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Reviews they wrote</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">format</span>(reviews_by_them, <span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>),</span>
+<span id="cb23-396"><a href="#cb23-396" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Share of reviews of the 108</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.1f%%&quot;</span>, <span class="dv">100</span> <span class="sc">*</span> share_of_reviews)</span>
+<span id="cb23-397"><a href="#cb23-397" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-398"><a href="#cb23-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-399"><a href="#cb23-399" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(kept, <span class="at">booktabs =</span> <span class="cn">TRUE</span>, <span class="at">align =</span> <span class="st">&quot;rrrr&quot;</span>)</span>
+<span id="cb23-400"><a href="#cb23-400" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-401"><a href="#cb23-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-402"><a href="#cb23-402" aria-hidden="true" tabindex="-1"></a>70 of the 108 places have an adjusted score. The other 38 stay in the 108 and in the stars ranking. Le Petit Bistro and Bobby&#39;s Seafood are two of the 38.</span>
+<span id="cb23-402"><a href="#cb23-402" aria-hidden="true" tabindex="-1"></a>The bar of 5 keeps 229 of 27,559 reviewers, and they wrote 5.2% of the 33,713 reviews of the 108. At a bar of 10 the count falls to 40 reviewers and 1.8% of the reviews, and the adjusted neighborhood winner is still the French Quarter.</span>
 <span id="cb23-403"><a href="#cb23-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-404"><a href="#cb23-404" aria-hidden="true" tabindex="-1"></a><span class="fu">## The two lists</span></span>
+<span id="cb23-404"><a href="#cb23-404" aria-hidden="true" tabindex="-1"></a>70 of the 108 places have an adjusted score. The other 38 stay in the 108 and in the stars ranking. Le Petit Bistro and Bobby&#39;s Seafood are two of the 38.</span>
 <span id="cb23-405"><a href="#cb23-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-406"><a href="#cb23-406" aria-hidden="true" tabindex="-1"></a>Both lists use only the 70 places with an adjusted score. The stars list sorts by Yelp stars, then by more eligible-reviewer reviews, then by a higher adjusted score. The adjusted list sorts by the adjusted score, then by more eligible-reviewer reviews, then by higher Yelp stars. The all-reviewer mean is the average of every review of the place. The median gap is the middle of the gaps, and I sorted by the average of the gaps. The two can differ because most reviewers give whole stars, so the middle gap is often 0 while a few large misses pull the average.</span>
+<span id="cb23-406"><a href="#cb23-406" aria-hidden="true" tabindex="-1"></a><span class="fu">## The two lists</span></span>
 <span id="cb23-407"><a href="#cb23-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-410"><a href="#cb23-410" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-411"><a href="#cb23-411" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: top10-stars</span></span>
-<span id="cb23-412"><a href="#cb23-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-413"><a href="#cb23-413" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 10 by Yelp stars, from R/reviewers.R</span></span>
-<span id="cb23-414"><a href="#cb23-414" aria-hidden="true" tabindex="-1"></a>top10_stars <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/top10_stars.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-415"><a href="#cb23-415" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb23-416"><a href="#cb23-416" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rank =</span> rank,</span>
-<span id="cb23-417"><a href="#cb23-417" aria-hidden="true" tabindex="-1"></a>    <span class="at">Restaurant =</span> business_name,</span>
-<span id="cb23-418"><a href="#cb23-418" aria-hidden="true" tabindex="-1"></a>    <span class="at">Neighborhood =</span> area_name,</span>
-<span id="cb23-419"><a href="#cb23-419" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Yelp stars</span><span class="st">`</span> <span class="ot">=</span> stars,</span>
-<span id="cb23-420"><a href="#cb23-420" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">All-reviewer mean</span><span class="st">`</span> <span class="ot">=</span> mean_stars_all,</span>
-<span id="cb23-421"><a href="#cb23-421" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Eligible reviews</span><span class="st">`</span> <span class="ot">=</span> eligible_reviews,</span>
-<span id="cb23-422"><a href="#cb23-422" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Adjusted score</span><span class="st">`</span> <span class="ot">=</span> adjusted_score,</span>
-<span id="cb23-423"><a href="#cb23-423" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Median gap</span><span class="st">`</span> <span class="ot">=</span> median_gap</span>
-<span id="cb23-424"><a href="#cb23-424" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb23-425"><a href="#cb23-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-426"><a href="#cb23-426" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-427"><a href="#cb23-427" aria-hidden="true" tabindex="-1"></a>  top10_stars,</span>
-<span id="cb23-428"><a href="#cb23-428" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
-<span id="cb23-429"><a href="#cb23-429" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb23-430"><a href="#cb23-430" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">&quot;rllrrrrr&quot;</span>,</span>
-<span id="cb23-431"><a href="#cb23-431" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Top 10 by Yelp stars, among the 70 places with an adjusted score.&quot;</span></span>
-<span id="cb23-432"><a href="#cb23-432" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-433"><a href="#cb23-433" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-434"><a href="#cb23-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-435"><a href="#cb23-435" aria-hidden="true" tabindex="-1"></a>Seven places are on the stars list and not the adjusted list: Café Amelie, Maypop Restaurant, Sneaky Pickle, The Elysian Bar, Treo, The Bower Bar, and True Food Kitchen. All ten have 4.5 stars, so the order comes from the second rule, the number of eligible-reviewer reviews.</span>
+<span id="cb23-408"><a href="#cb23-408" aria-hidden="true" tabindex="-1"></a>Both lists use only the 70 places with an adjusted score. The stars list sorts by Yelp stars, then by more eligible-reviewer reviews, then by a higher adjusted score. The adjusted list sorts by the adjusted score, then by more eligible-reviewer reviews, then by higher Yelp stars. The all-reviewer mean is the average of every review of the place. The median gap is the middle of the gaps, and I sorted by the average of the gaps. The two can differ because most reviewers give whole stars, so the middle gap is often 0 while a few large misses pull the average.</span>
+<span id="cb23-409"><a href="#cb23-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-412"><a href="#cb23-412" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-413"><a href="#cb23-413" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: top10-stars</span></span>
+<span id="cb23-414"><a href="#cb23-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-415"><a href="#cb23-415" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 10 by Yelp stars, from R/reviewers.R</span></span>
+<span id="cb23-416"><a href="#cb23-416" aria-hidden="true" tabindex="-1"></a>top10_stars <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/top10_stars.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-417"><a href="#cb23-417" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb23-418"><a href="#cb23-418" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rank =</span> rank,</span>
+<span id="cb23-419"><a href="#cb23-419" aria-hidden="true" tabindex="-1"></a>    <span class="at">Restaurant =</span> business_name,</span>
+<span id="cb23-420"><a href="#cb23-420" aria-hidden="true" tabindex="-1"></a>    <span class="at">Neighborhood =</span> area_name,</span>
+<span id="cb23-421"><a href="#cb23-421" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Yelp stars</span><span class="st">`</span> <span class="ot">=</span> stars,</span>
+<span id="cb23-422"><a href="#cb23-422" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">All-reviewer mean</span><span class="st">`</span> <span class="ot">=</span> mean_stars_all,</span>
+<span id="cb23-423"><a href="#cb23-423" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Eligible reviews</span><span class="st">`</span> <span class="ot">=</span> eligible_reviews,</span>
+<span id="cb23-424"><a href="#cb23-424" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Adjusted score</span><span class="st">`</span> <span class="ot">=</span> adjusted_score,</span>
+<span id="cb23-425"><a href="#cb23-425" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Median gap</span><span class="st">`</span> <span class="ot">=</span> median_gap</span>
+<span id="cb23-426"><a href="#cb23-426" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-427"><a href="#cb23-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-428"><a href="#cb23-428" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-429"><a href="#cb23-429" aria-hidden="true" tabindex="-1"></a>  top10_stars,</span>
+<span id="cb23-430"><a href="#cb23-430" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
+<span id="cb23-431"><a href="#cb23-431" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-432"><a href="#cb23-432" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">&quot;rllrrrrr&quot;</span>,</span>
+<span id="cb23-433"><a href="#cb23-433" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Top 10 by Yelp stars, among the 70 places with an adjusted score.&quot;</span></span>
+<span id="cb23-434"><a href="#cb23-434" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-435"><a href="#cb23-435" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-436"><a href="#cb23-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-439"><a href="#cb23-439" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-440"><a href="#cb23-440" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: top10-adjusted</span></span>
-<span id="cb23-441"><a href="#cb23-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-442"><a href="#cb23-442" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 10 by adjusted score, from R/reviewers.R</span></span>
-<span id="cb23-443"><a href="#cb23-443" aria-hidden="true" tabindex="-1"></a>top10_adjusted <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/top10_adjusted.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-444"><a href="#cb23-444" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb23-445"><a href="#cb23-445" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rank =</span> rank,</span>
-<span id="cb23-446"><a href="#cb23-446" aria-hidden="true" tabindex="-1"></a>    <span class="at">Restaurant =</span> business_name,</span>
-<span id="cb23-447"><a href="#cb23-447" aria-hidden="true" tabindex="-1"></a>    <span class="at">Neighborhood =</span> area_name,</span>
-<span id="cb23-448"><a href="#cb23-448" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Yelp stars</span><span class="st">`</span> <span class="ot">=</span> stars,</span>
-<span id="cb23-449"><a href="#cb23-449" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">All-reviewer mean</span><span class="st">`</span> <span class="ot">=</span> mean_stars_all,</span>
-<span id="cb23-450"><a href="#cb23-450" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Eligible reviews</span><span class="st">`</span> <span class="ot">=</span> eligible_reviews,</span>
-<span id="cb23-451"><a href="#cb23-451" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Adjusted score</span><span class="st">`</span> <span class="ot">=</span> adjusted_score,</span>
-<span id="cb23-452"><a href="#cb23-452" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Median gap</span><span class="st">`</span> <span class="ot">=</span> median_gap</span>
-<span id="cb23-453"><a href="#cb23-453" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb23-454"><a href="#cb23-454" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-455"><a href="#cb23-455" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb23-456"><a href="#cb23-456" aria-hidden="true" tabindex="-1"></a>  top10_adjusted,</span>
-<span id="cb23-457"><a href="#cb23-457" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
-<span id="cb23-458"><a href="#cb23-458" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb23-459"><a href="#cb23-459" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">&quot;rllrrrrr&quot;</span>,</span>
-<span id="cb23-460"><a href="#cb23-460" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Top 10 by adjusted score. The map shows this list.&quot;</span></span>
-<span id="cb23-461"><a href="#cb23-461" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb23-462"><a href="#cb23-462" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-463"><a href="#cb23-463" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-464"><a href="#cb23-464" aria-hidden="true" tabindex="-1"></a>Dante&#39;s Kitchen, Saffron nola, and Carrollton Market are on both lists. Seven places are on the adjusted list and not the stars list: Roux Carre, Longway Tavern, Café Cour, Café NOMA, Broussard&#39;s, River Bottom Restaurant, and Bistro Daisy. Roux Carre is first at 0.64, on 7 eligible reviews, and it is the only place with a median gap of 1.</span>
+<span id="cb23-437"><a href="#cb23-437" aria-hidden="true" tabindex="-1"></a>Seven places are on the stars list and not the adjusted list: Café Amelie, Maypop Restaurant, Sneaky Pickle, The Elysian Bar, Treo, The Bower Bar, and True Food Kitchen. All ten have 4.5 stars, so the order comes from the second rule, the number of eligible-reviewer reviews.</span>
+<span id="cb23-438"><a href="#cb23-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-441"><a href="#cb23-441" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-442"><a href="#cb23-442" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: top10-adjusted</span></span>
+<span id="cb23-443"><a href="#cb23-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-444"><a href="#cb23-444" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 10 by adjusted score, from R/reviewers.R</span></span>
+<span id="cb23-445"><a href="#cb23-445" aria-hidden="true" tabindex="-1"></a>top10_adjusted <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/top10_adjusted.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-446"><a href="#cb23-446" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb23-447"><a href="#cb23-447" aria-hidden="true" tabindex="-1"></a>    <span class="at">Rank =</span> rank,</span>
+<span id="cb23-448"><a href="#cb23-448" aria-hidden="true" tabindex="-1"></a>    <span class="at">Restaurant =</span> business_name,</span>
+<span id="cb23-449"><a href="#cb23-449" aria-hidden="true" tabindex="-1"></a>    <span class="at">Neighborhood =</span> area_name,</span>
+<span id="cb23-450"><a href="#cb23-450" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Yelp stars</span><span class="st">`</span> <span class="ot">=</span> stars,</span>
+<span id="cb23-451"><a href="#cb23-451" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">All-reviewer mean</span><span class="st">`</span> <span class="ot">=</span> mean_stars_all,</span>
+<span id="cb23-452"><a href="#cb23-452" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Eligible reviews</span><span class="st">`</span> <span class="ot">=</span> eligible_reviews,</span>
+<span id="cb23-453"><a href="#cb23-453" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Adjusted score</span><span class="st">`</span> <span class="ot">=</span> adjusted_score,</span>
+<span id="cb23-454"><a href="#cb23-454" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Median gap</span><span class="st">`</span> <span class="ot">=</span> median_gap</span>
+<span id="cb23-455"><a href="#cb23-455" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-456"><a href="#cb23-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-457"><a href="#cb23-457" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb23-458"><a href="#cb23-458" aria-hidden="true" tabindex="-1"></a>  top10_adjusted,</span>
+<span id="cb23-459"><a href="#cb23-459" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
+<span id="cb23-460"><a href="#cb23-460" aria-hidden="true" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-461"><a href="#cb23-461" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">&quot;rllrrrrr&quot;</span>,</span>
+<span id="cb23-462"><a href="#cb23-462" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Top 10 by adjusted score. The map shows this list.&quot;</span></span>
+<span id="cb23-463"><a href="#cb23-463" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb23-464"><a href="#cb23-464" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-465"><a href="#cb23-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-466"><a href="#cb23-466" aria-hidden="true" tabindex="-1"></a><span class="fu">## Who moved</span></span>
+<span id="cb23-466"><a href="#cb23-466" aria-hidden="true" tabindex="-1"></a>Dante&#39;s Kitchen, Saffron nola, and Carrollton Market are on both lists. Seven places are on the adjusted list and not the stars list: Roux Carre, Longway Tavern, Café Cour, Café NOMA, Broussard&#39;s, River Bottom Restaurant, and Bistro Daisy. Roux Carre is first at 0.64, on 7 eligible reviews, and it is the only place with a median gap of 1.</span>
 <span id="cb23-467"><a href="#cb23-467" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-468"><a href="#cb23-468" aria-hidden="true" tabindex="-1"></a>Four places on the adjusted list rest on 6 or 7 eligible reviews: Roux Carre, Café Cour, Café NOMA, and River Bottom Restaurant. Café NOMA moves from 48th on stars to 4th, and River Bottom Restaurant from 49th to 9th. With so few reviews, those moves can come from sample size. Roux Carre has 37 reviews in all and 4.54 as its all-reviewer mean, so it was already well liked before the adjustment.</span>
+<span id="cb23-468"><a href="#cb23-468" aria-hidden="true" tabindex="-1"></a><span class="fu">## Who moved</span></span>
 <span id="cb23-469"><a href="#cb23-469" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-470"><a href="#cb23-470" aria-hidden="true" tabindex="-1"></a>Sneaky Pickle is the clearest drop. It falls from 6th to 51st on 27 eligible reviews, and 3 of the 7 reviewers whose usual score is 5 gave it less. Café Amelie falls from 2nd to 31st and Maypop Restaurant from 4th to 29th, but those are moves inside a tight pack. Their scores, -0.11 and -0.09, are still above the middle of the 70 places, which is -0.19.</span>
+<span id="cb23-470"><a href="#cb23-470" aria-hidden="true" tabindex="-1"></a>Four places on the adjusted list rest on 6 or 7 eligible reviews: Roux Carre, Café Cour, Café NOMA, and River Bottom Restaurant. Café NOMA moves from 48th on stars to 4th, and River Bottom Restaurant from 49th to 9th. With so few reviews, those moves can come from sample size. Roux Carre has 37 reviews in all and 4.54 as its all-reviewer mean, so it was already well liked before the adjustment.</span>
 <span id="cb23-471"><a href="#cb23-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-472"><a href="#cb23-472" aria-hidden="true" tabindex="-1"></a>The average of the 229 reviewers&#39; usual scores is 4.15 by median and 3.99 by mean. Most gaps therefore sit slightly below zero, and only 21 of the 70 places are above it.</span>
+<span id="cb23-472"><a href="#cb23-472" aria-hidden="true" tabindex="-1"></a>Sneaky Pickle is the clearest drop. It falls from 6th to 51st on 27 eligible reviews, and 3 of the 7 reviewers whose usual score is 5 gave it less. Café Amelie falls from 2nd to 31st and Maypop Restaurant from 4th to 29th, but those are moves inside a tight pack. Their scores, -0.11 and -0.09, are still above the middle of the 70 places, which is -0.19.</span>
 <span id="cb23-473"><a href="#cb23-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-476"><a href="#cb23-476" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-477"><a href="#cb23-477" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-scatter</span></span>
-<span id="cb23-478"><a href="#cb23-478" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Yelp stars against the adjusted score for the 70 places with a score. Point size is the number of eligible-reviewer reviews. The line at zero is a reviewer&#39;s usual score. Points are nudged sideways so stacked places can be seen.&quot;</span></span>
-<span id="cb23-479"><a href="#cb23-479" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
-<span id="cb23-480"><a href="#cb23-480" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-481"><a href="#cb23-481" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/reviewers.R</span></span>
-<span id="cb23-482"><a href="#cb23-482" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/adjusted_scatter.png&quot;</span>)</span>
-<span id="cb23-483"><a href="#cb23-483" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-484"><a href="#cb23-484" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-485"><a href="#cb23-485" aria-hidden="true" tabindex="-1"></a>Places with 4.5 stars range from -0.41 to 0.64 on the adjusted score. A business rating alone does not say where a place falls against reviewers&#39; own habits. The one place at -2.93 is Sara&#39;s Bistro, with 3.5 stars and 7 eligible reviews.</span>
+<span id="cb23-474"><a href="#cb23-474" aria-hidden="true" tabindex="-1"></a>The average of the 229 reviewers&#39; usual scores is 4.15 by median and 3.99 by mean. Most gaps therefore sit slightly below zero, and only 21 of the 70 places are above it.</span>
+<span id="cb23-475"><a href="#cb23-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-478"><a href="#cb23-478" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-479"><a href="#cb23-479" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-scatter</span></span>
+<span id="cb23-480"><a href="#cb23-480" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;Yelp stars against the adjusted score for the 70 places with a score. Point size is the number of eligible-reviewer reviews. The line at zero is a reviewer&#39;s usual score. Points are nudged sideways so stacked places can be seen.&quot;</span></span>
+<span id="cb23-481"><a href="#cb23-481" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
+<span id="cb23-482"><a href="#cb23-482" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-483"><a href="#cb23-483" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/reviewers.R</span></span>
+<span id="cb23-484"><a href="#cb23-484" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/adjusted_scatter.png&quot;</span>)</span>
+<span id="cb23-485"><a href="#cb23-485" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-486"><a href="#cb23-486" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-487"><a href="#cb23-487" aria-hidden="true" tabindex="-1"></a><span class="fu">## The adjusted top 10 on the map</span></span>
+<span id="cb23-487"><a href="#cb23-487" aria-hidden="true" tabindex="-1"></a>Places with 4.5 stars range from -0.41 to 0.64 on the adjusted score. A business rating alone does not say where a place falls against reviewers&#39; own habits. The one place at -2.93 is Sara&#39;s Bistro, with 3.5 stars and 7 eligible reviews.</span>
 <span id="cb23-488"><a href="#cb23-488" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-491"><a href="#cb23-491" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-492"><a href="#cb23-492" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-top10-map</span></span>
-<span id="cb23-493"><a href="#cb23-493" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;The adjusted top 10 inside the neighborhood boundaries. The four French Quarter places are named in the zoom box, and their labels are nudged apart so they do not stack.&quot;</span></span>
-<span id="cb23-494"><a href="#cb23-494" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
-<span id="cb23-495"><a href="#cb23-495" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-496"><a href="#cb23-496" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/reviewers.R</span></span>
-<span id="cb23-497"><a href="#cb23-497" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/top10_map.png&quot;</span>)</span>
-<span id="cb23-498"><a href="#cb23-498" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-499"><a href="#cb23-499" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-500"><a href="#cb23-500" aria-hidden="true" tabindex="-1"></a>Four of the ten are in the French Quarter, and two are in Leonidas, Dante&#39;s Kitchen and Carrollton Market. Central City, City Park, East Riverside, and Audubon each hold one. Bistro Daisy sits on the Audubon edge.</span>
+<span id="cb23-489"><a href="#cb23-489" aria-hidden="true" tabindex="-1"></a><span class="fu">## The adjusted top 10 on the map</span></span>
+<span id="cb23-490"><a href="#cb23-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-493"><a href="#cb23-493" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-494"><a href="#cb23-494" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-top10-map</span></span>
+<span id="cb23-495"><a href="#cb23-495" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &quot;The adjusted top 10 inside the neighborhood boundaries. The four French Quarter places are named in the zoom box, and their labels are nudged apart so they do not stack.&quot;</span></span>
+<span id="cb23-496"><a href="#cb23-496" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: &quot;100%&quot;</span></span>
+<span id="cb23-497"><a href="#cb23-497" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-498"><a href="#cb23-498" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure made in R/reviewers.R</span></span>
+<span id="cb23-499"><a href="#cb23-499" aria-hidden="true" tabindex="-1"></a><span class="fu">include_graphics</span>(<span class="st">&quot;figures/top10_map.png&quot;</span>)</span>
+<span id="cb23-500"><a href="#cb23-500" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-501"><a href="#cb23-501" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-502"><a href="#cb23-502" aria-hidden="true" tabindex="-1"></a><span class="fu">## Neighborhoods under both rules</span></span>
+<span id="cb23-502"><a href="#cb23-502" aria-hidden="true" tabindex="-1"></a>Four of the ten are in the French Quarter, and two are in Leonidas, Dante&#39;s Kitchen and Carrollton Market. Central City, City Park, East Riverside, and Audubon each hold one. Bistro Daisy sits on the Audubon edge.</span>
 <span id="cb23-503"><a href="#cb23-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-504"><a href="#cb23-504" aria-hidden="true" tabindex="-1"></a>Under the stars rule, a neighborhood needs at least 5 of the 108 places, and its number is the average of their Yelp stars. Under the adjusted rule, it needs at least 5 places that have an adjusted score, and its number is the unweighted average of those scores. The tie-break is more places.</span>
+<span id="cb23-504"><a href="#cb23-504" aria-hidden="true" tabindex="-1"></a><span class="fu">## Neighborhoods under both rules</span></span>
 <span id="cb23-505"><a href="#cb23-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-508"><a href="#cb23-508" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-509"><a href="#cb23-509" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: neighborhood-both</span></span>
-<span id="cb23-510"><a href="#cb23-510" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-511"><a href="#cb23-511" aria-hidden="true" tabindex="-1"></a><span class="co"># Both neighborhood rankings, from R/reviewers.R</span></span>
-<span id="cb23-512"><a href="#cb23-512" aria-hidden="true" tabindex="-1"></a>stars_rule <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/neighborhood_stars.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-513"><a href="#cb23-513" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rule =</span> <span class="st">&quot;Yelp stars&quot;</span>, <span class="at">Score =</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.2f&quot;</span>, score))</span>
-<span id="cb23-514"><a href="#cb23-514" aria-hidden="true" tabindex="-1"></a>adjusted_rule <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/neighborhood_adjusted.csv&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb23-515"><a href="#cb23-515" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rule =</span> <span class="st">&quot;Adjusted score&quot;</span>, <span class="at">Score =</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.2f&quot;</span>, score))</span>
-<span id="cb23-516"><a href="#cb23-516" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-517"><a href="#cb23-517" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(stars_rule, adjusted_rule) <span class="sc">|&gt;</span></span>
-<span id="cb23-518"><a href="#cb23-518" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(Rule, <span class="at">Neighborhood =</span> area_name, <span class="at">Places =</span> places, Score) <span class="sc">|&gt;</span></span>
-<span id="cb23-519"><a href="#cb23-519" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
-<span id="cb23-520"><a href="#cb23-520" aria-hidden="true" tabindex="-1"></a>    <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb23-521"><a href="#cb23-521" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">&quot;llrr&quot;</span>,</span>
-<span id="cb23-522"><a href="#cb23-522" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Places are all 108 under the stars rule and the places with an adjusted score under the adjusted rule.&quot;</span></span>
-<span id="cb23-523"><a href="#cb23-523" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb23-524"><a href="#cb23-524" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb23-525"><a href="#cb23-525" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-526"><a href="#cb23-526" aria-hidden="true" tabindex="-1"></a>Leonidas is first under the stars rule, with 7 places at 4.43. The French Quarter is first under the adjusted rule, with 23 places at -0.14. Leonidas has 4 places with an adjusted score, so it is not in the second ranking. Its other 3 places have fewer than 5 eligible-reviewer reviews. All five neighborhoods in the adjusted ranking are below zero, and the French Quarter sits closest to it. With the reviewer bar at 10, the French Quarter is still first, at -0.02 over 14 places.</span>
+<span id="cb23-506"><a href="#cb23-506" aria-hidden="true" tabindex="-1"></a>Under the stars rule, a neighborhood needs at least 5 of the 108 places, and its number is the average of their Yelp stars. Under the adjusted rule, it needs at least 5 places that have an adjusted score, and its number is the unweighted average of those scores. The tie-break is more places.</span>
+<span id="cb23-507"><a href="#cb23-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-510"><a href="#cb23-510" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-511"><a href="#cb23-511" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: neighborhood-both</span></span>
+<span id="cb23-512"><a href="#cb23-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-513"><a href="#cb23-513" aria-hidden="true" tabindex="-1"></a><span class="co"># Both neighborhood rankings, from R/reviewers.R</span></span>
+<span id="cb23-514"><a href="#cb23-514" aria-hidden="true" tabindex="-1"></a>stars_rule <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/neighborhood_stars.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-515"><a href="#cb23-515" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rule =</span> <span class="st">&quot;Yelp stars&quot;</span>, <span class="at">Score =</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.2f&quot;</span>, score))</span>
+<span id="cb23-516"><a href="#cb23-516" aria-hidden="true" tabindex="-1"></a>adjusted_rule <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/new_orleans/neighborhood_adjusted.csv&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-517"><a href="#cb23-517" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Rule =</span> <span class="st">&quot;Adjusted score&quot;</span>, <span class="at">Score =</span> <span class="fu">sprintf</span>(<span class="st">&quot;%.2f&quot;</span>, score))</span>
+<span id="cb23-518"><a href="#cb23-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-519"><a href="#cb23-519" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(stars_rule, adjusted_rule) <span class="sc">|&gt;</span></span>
+<span id="cb23-520"><a href="#cb23-520" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(Rule, <span class="at">Neighborhood =</span> area_name, <span class="at">Places =</span> places, Score) <span class="sc">|&gt;</span></span>
+<span id="cb23-521"><a href="#cb23-521" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
+<span id="cb23-522"><a href="#cb23-522" aria-hidden="true" tabindex="-1"></a>    <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-523"><a href="#cb23-523" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">&quot;llrr&quot;</span>,</span>
+<span id="cb23-524"><a href="#cb23-524" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Places are all 108 under the stars rule and the places with an adjusted score under the adjusted rule.&quot;</span></span>
+<span id="cb23-525"><a href="#cb23-525" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-526"><a href="#cb23-526" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb23-527"><a href="#cb23-527" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-528"><a href="#cb23-528" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-529"><a href="#cb23-529" aria-hidden="true" tabindex="-1"></a><span class="fu">## Limitations</span></span>
+<span id="cb23-528"><a href="#cb23-528" aria-hidden="true" tabindex="-1"></a>Leonidas is first under the stars rule, with 7 places at 4.43. The French Quarter is first under the adjusted rule, with 23 places at -0.14. Leonidas has 4 places with an adjusted score, so it is not in the second ranking. Its other 3 places have fewer than 5 eligible-reviewer reviews. All five neighborhoods in the adjusted ranking are below zero, and the French Quarter sits closest to it. With the reviewer bar at 10, the French Quarter is still first, at -0.02 over 14 places.</span>
+<span id="cb23-529"><a href="#cb23-529" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-530"><a href="#cb23-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-531"><a href="#cb23-531" aria-hidden="true" tabindex="-1"></a>The word list is a rough way to mark a creative place. For a place with 20 or fewer reviews, one review that uses a list word clears 5%. 29 of the 108 are in that range. Golden Feather Mardi Gras Indian Restaurant Gallery has five reviews, one hit, and 5 business stars.</span>
+<span id="cb23-531"><a href="#cb23-531" aria-hidden="true" tabindex="-1"></a><span class="fu">## Limitations</span></span>
 <span id="cb23-532"><a href="#cb23-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-533"><a href="#cb23-533" aria-hidden="true" tabindex="-1"></a>The chain rule is the exact name after lowercasing and squishing. &quot;WOW Café&quot;, with an accent, is a different string from &quot;WOW Cafe&quot;. &quot;WOW Cafe - Tulane &amp; Galvez&quot; is its own string too. Neither of those two strings is in the final 108.</span>
+<span id="cb23-533"><a href="#cb23-533" aria-hidden="true" tabindex="-1"></a>The word list is a rough way to mark a creative place. For a place with 20 or fewer reviews, one review that uses a list word clears 5%. 29 of the 108 are in that range. Golden Feather Mardi Gras Indian Restaurant Gallery has five reviews, one hit, and 5 business stars.</span>
 <span id="cb23-534"><a href="#cb23-534" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-535"><a href="#cb23-535" aria-hidden="true" tabindex="-1"></a>Le Petit Bistro and Bobby&#39;s Seafood fall outside both polygon layers. They stay in the set of 108. The ranking leaves them out.</span>
+<span id="cb23-535"><a href="#cb23-535" aria-hidden="true" tabindex="-1"></a>The chain rule is the exact name after lowercasing and squishing. &quot;WOW Café&quot;, with an accent, is a different string from &quot;WOW Cafe&quot;. &quot;WOW Cafe - Tulane &amp; Galvez&quot; is its own string too. Neither of those two strings is in the final 108.</span>
 <span id="cb23-536"><a href="#cb23-536" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-537"><a href="#cb23-537" aria-hidden="true" tabindex="-1"></a>The first neighborhood ranking uses Yelp&#39;s business stars. The second uses the adjusted score, which is not a Yelp star. It says whether a review beat that reviewer&#39;s median, and nothing about the place beyond that. 38 of the 108 have fewer than 5 eligible-reviewer reviews, so they have no adjusted score. Four of the adjusted top 10 rest on 6 or 7 of those reviews.</span>
+<span id="cb23-537"><a href="#cb23-537" aria-hidden="true" tabindex="-1"></a>Le Petit Bistro and Bobby&#39;s Seafood fall outside both polygon layers. They stay in the set of 108. The ranking leaves them out.</span>
 <span id="cb23-538"><a href="#cb23-538" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-539"><a href="#cb23-539" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sources</span></span>
+<span id="cb23-539"><a href="#cb23-539" aria-hidden="true" tabindex="-1"></a>The first neighborhood ranking uses Yelp&#39;s business stars. The second uses the adjusted score, which is not a Yelp star. It says whether a review beat that reviewer&#39;s median, and nothing about the place beyond that. 38 of the 108 have fewer than 5 eligible-reviewer reviews, so they have no adjusted score. Four of the adjusted top 10 rest on 6 or 7 of those reviews.</span>
 <span id="cb23-540"><a href="#cb23-540" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-541"><a href="#cb23-541" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Yelp Open Dataset, filtered in <span class="in">`R/import.R`</span>. The raw JSON is not in the repo.</span>
-<span id="cb23-542"><a href="#cb23-542" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Neighborhood Statistical Areas from <span class="co">[</span><span class="ot">Data.NOLA.gov</span><span class="co">](https://data.nola.gov/api/v3/views/exvn-jeh2/query.geojson?accessType=DOWNLOAD)</span>, saved as <span class="in">`data/geo/neighborhoods.geojson`</span>. The name field is <span class="in">`gnocdc_lab`</span>.</span>
-<span id="cb23-543"><a href="#cb23-543" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2023 Census tracts and places, cartographic boundary files, through <span class="in">`tigris`</span>.</span>
-<span id="cb23-544"><a href="#cb23-544" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-545"><a href="#cb23-545" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prompt log</span></span>
+<span id="cb23-541"><a href="#cb23-541" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sources</span></span>
+<span id="cb23-542"><a href="#cb23-542" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-543"><a href="#cb23-543" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Yelp Open Dataset, filtered in <span class="in">`R/import.R`</span>. The raw JSON is not in the repo.</span>
+<span id="cb23-544"><a href="#cb23-544" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Neighborhood Statistical Areas from <span class="co">[</span><span class="ot">Data.NOLA.gov</span><span class="co">](https://data.nola.gov/api/v3/views/exvn-jeh2/query.geojson?accessType=DOWNLOAD)</span>, saved as <span class="in">`data/geo/neighborhoods.geojson`</span>. The name field is <span class="in">`gnocdc_lab`</span>.</span>
+<span id="cb23-545"><a href="#cb23-545" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2023 Census tracts and places, cartographic boundary files, through <span class="in">`tigris`</span>.</span>
 <span id="cb23-546"><a href="#cb23-546" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-547"><a href="#cb23-547" aria-hidden="true" tabindex="-1"></a>The prompts I gave the agent are in <span class="co">[</span><span class="ot">prompts/PROMPT_HISTORY.md</span><span class="co">](https://github.com/Michaelhamaty/MATH-167R-Project2/blob/main/prompts/PROMPT_HISTORY.md)</span>. Each entry has the date, what I asked, and what I decided next. They show the creative options I asked for, the questions that let me add my own rules, and the points where I told the agent what to do.</span>
+<span id="cb23-547"><a href="#cb23-547" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prompt log</span></span>
+<span id="cb23-548"><a href="#cb23-548" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-549"><a href="#cb23-549" aria-hidden="true" tabindex="-1"></a>The prompts I gave the agent are in <span class="co">[</span><span class="ot">prompts/PROMPT_HISTORY.md</span><span class="co">](https://github.com/Michaelhamaty/MATH-167R-Project2/blob/main/prompts/PROMPT_HISTORY.md)</span>. Each entry has the date, what I asked, and what I decided next. They show the creative options I asked for, the questions that let me add my own rules, and the points where I told the agent what to do.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -25,6 +25,8 @@ execute:
 
 Where can a foodie find local, creative places to stay for a meal, a drink, or seafood in New Orleans, which ten places rank first, and which neighborhood is best when an area needs at least five of those places?
 
+I am someone who has a great appreciation for businesses who have clearly put intentional thought and creativity into their work. This project does just that, while also offering the spotlight to small developing businesses.
+
 ## Overview
 
 I wanted a meal, a drink, or seafood in a place that still felt local, so those four labels are the start of the set.
